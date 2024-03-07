@@ -4,12 +4,12 @@
 <info>
   <link type="guide" xref="index"/>
 </info>
-<title>Terms</title>
+<title>Terminology</title>
 <terms>
   <item>
-    <title>Fava beans</title>
-    <title>Lima beans</title>
-    <p>These are actually beans.</p>
+    <title>Fedora Atomic</title>
+    <title>OSTree</title>
+    <p>System is built with this.</p>
   </item>
   <item>
     <title>Jelly beans</title>
