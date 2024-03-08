@@ -1,4 +1,4 @@
-# bluefin-help
+# bazzite-help
 Example linux yelp-based help documentation, using `yelp-tools` for freedesktop.org compliant linux help.
 
 ## Dev Container
