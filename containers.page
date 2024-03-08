@@ -1,8 +1,69 @@
 <page xmlns="http://projectmallard.org/1.0/"
-      type="topic"
+      type="guide"
       id="containers">
 <info>
-  <link type="guide" xref="dx"/>
+  <link type="guide" xref="applications"/>
 </info>
-<title>Containers</title>
+<title>3. Linux Container Environments</title>
+
+<p>Run other minimal variants of popular Linux distributions in Bazzite inside of a container. Access each distribution’s packages without any of their dependencies and libraries affecting the host machine.</p>
+
+<p> Using this method to obtain software requires knowledge of how traditional Linux operating systems install packages </p>
+
+<p> Package Mangers for a Small List of Linux Distributions: </p>
+
+<table>
+  <tr>
+    <td><p>OS</p></td> <td><p>Package Manager</p></td>
+  </tr>
+  <tr>
+    <td><p>Eurasian Wigeon</p></td> <td><p>Anas penelope</p></td>
+    <td><p>45-50cm</p></td>         <td><p>680g</p></td>
+  </tr>
+  <tr>
+    <td><p>Common Teal</p></td> <td><p>Anas crecca</p></td>
+    <td><p>34-43cm</p></td>     <td><p>360g</p></td>
+  </tr>
+  <tr>
+    <td><p>Northern Pintail</p></td> <td><p>Anas acuta</p></td>
+    <td><p>59-76cm</p></td>          <td><p>450-1360g</p></td>
+  </tr>
+</table>
+
+
+
+<section>
+ <subtitle><link type="seealso" href="https://distrobox.it/">Distrobox</link></subtitle>
+ <p><media type="image" src="upload://p0qiLk4DY2QMJKPFZ6pNItOlhim.png" mime="image/png" /></p>
+ <p>Distrobox containers are running sub-systems of other popular <link type="seealso" href="https://distrobox.it/compatibility/#containers-distros">Linux distributions</link> with access to their package managers (<code>apt</code>, <code>dnf</code>, <code>pacman</code>, etc.) and their package formats (<code>.deb</code>/<code>.rpm</code>) </p>
+ <p>Distrobox containers can be made with the host terminal following this <em style="strong">command</em>:
+ <code>ujust distrobox</code> </p>
+ <p><media type="image" src="upload://rqzTC1SNKDUvke2aOWaiM27zjWg.png" mime="image/png" /></p>
+ <p>The <em style="strong">default</em> container is our Bazzite-Arch container which gives users access to the <link type="seealso" href="https://aur.archlinux.org/packages">Arch User Repository</link>.</p>
+ <p>Swap between different containers and your host with the terminal or alternatively <em style="strong">enter</em>:
+ <code>distrobox enter &lt;container&gt;</code></p>
+ <p>Applications with a graphical user interface can integrate with your system with an application shortcut <em style="strong">entering this command inside of the container</em>:</p>
+ <p><code>bash
+ distrobox-export --app &lt;package&gt;</code></p>
+ <p><media type="image" src="upload://cJqlP7zgD8T7D2kMKklM1zfv3nt.png" mime="image/png" /></p>
+ <p>Distrobox containers can be created and managed graphically with <link type="seealso" href="https://github.com/Dvlv/BoxBuddyRS">BoxBuddy</link>.</p>
+ <p>Check out these other Distrobox <link type="seealso" href="https://universal-blue.discourse.group/docs?topic=44">tips</link> too.</p>
+ <p><em style="strong">Advanced users</em>: Declare Distrobox containers with <link type="seealso" href="https://distrobox.it/usage/distrobox-assemble/"><code>distrobox-assemble</code></link>.</p>
+</section>
+
+<section>
+ <subtitle><link type="seealso" href="https://containertoolbx.org/">Toolbx</link></subtitle>
+ <p><media type="image" src="upload://kq1XvV64XH2DEAw6JwkIprF1yoF.png" mime="image/png" /></p>
+ <p>Toolbx  is similar to Distrobox and is the default container method in upstream Fedora Atomic.</p>
+ <p>It allows users to run Linux containers on your host.</p>
+ <p><em style="strong">Open a host terminal and enter</em>:</p>
+ <p><code>toolbox create</code>
+ <em style="strong">Enter a toolbox with</em>
+ <code>toolbox enter &lt;container&gt;</code>
+ The <em style="strong">default</em> container is the latest stable Fedora release which gives users access to the <code>dnf</code> package manager quickly:</p>
+ <p><code>sudo dnf install &lt;package&gt;</code>
+ View the <link type="seealso" href="https://github.com/toolbx-images/images?tab=readme-ov-file#available-distributions-and-usage">supported Linux distributions</link> that can be used with Toolbx.</p>
+ <p>Read <link type="seealso" href="https://docs.fedoraproject.org/en-US/fedora-silverblue/toolbox/">upstream documentation</link> for more information.</p>
+</section>
+
 </page>

@@ -1,0 +1,28 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="guide"
+      id="ujust">
+<info>
+  <link type="guide" xref="applications"/>
+</info>
+<title>2. ujust</title>
+
+<section>
+ <title><link type="seealso" href="https://universal-blue.discourse.group/docs?topic=42"><code>ujust</code></link></title>
+ <p><media type="image" src="upload://oLQaiumjX8VV6x2WrJFSZIVoDR4.png" mime="image/png" /></p>
+ <p>Technically <code>ujust</code> is <em style="strong">not</em> a package format, but convenience commands that automate tasks using scripts.</p>
+ <p>It can be used to install certain software, but there are also commands for system configuration and maintenance too.</p>
+ <p>Open a host terminal and <em style="strong">enter</em>:</p>
+ <p><code>ujust</code>
+ This will output a list of available commands.</p>
+ <p><media type="image" src="upload://8Rkc2Qe1CYy3MBwS2CA4Uf5rqzq.png" mime="image/png" /></p>
+ <p>This will show all possible commands.</p>
+ <p><em style="strong">Find the command you want to use and enter</em>:
+ <code>ujust &lt;command&gt;</code></p>
+ <p>You can search for specific commands by <em style="strong">entering</em>:
+ <code>ujust | grep "&lt;search keyword(s)&gt;"</code></p>
+ <p>If you would like to see what each script does for each command, then you can view them locally in:
+ <code>/usr/share/ublue-os/just</code></p>
+</section>
+
+</page>
+
