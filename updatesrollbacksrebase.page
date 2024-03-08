@@ -1,0 +1,9 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="guide"
+      id="updatesrollbacksrebase">
+<info>
+  <link type="guide" xref="index"/>
+</info>
+<title>Updates, Rollbacks, and Rebasing</title>
+</page>
+
