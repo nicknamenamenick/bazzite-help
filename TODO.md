@@ -1,0 +1,6 @@
+- Take documentation from the Discourse, edit/shorten it, and leave out information that is only intended for users who have NOT already installed Bazzite.
+  - Notes can be taken from the "references" directory.
+- Categories should be numbered or listed correctly (default is alphabetical.)
+- This is intended for GNOME.
+  - Eventually will need a KHelpCenter version which uses DocBook as opposed to Mallard.
+- Make sure to backup files to the Github repository!
