@@ -1,0 +1,65 @@
+ <page xmlns="http://projectmallard.org/1.0/"
+      type="guide"
+      id="general">
+<info>
+  <link type="guide" xref="index"/>
+</info>
+<title>1. General</title>
+
+<section>
+ <title>How do I change my hostname?</title>
+ <p>Edit the <code>/etc/hostname</code> file with a new hostname, save it,  and reboot. </p>
+ <p><code>sudoedit /etc/hostname</code></p>
+
+</section>
+
+ <section>
+ <title>What are some of the unique applications that Bazzite uses?</title>
+ <p>(in alphabetical order)
+ - <link type="seealso" href="https://github.com/ublue-os/boxkit">Boxkit</link>
+   - Tool used for custom OCI Distrobox/Toolbox containers
+     - Anything from <link type="seealso" href="https://github.com/zelikos/davincibox">DaVinci Resolve</link> to <link type="seealso" href="https://github.com/ublue-os/obs-studio-portable">OBS Studio Portable</link> can be accessed with this.  These applications run in their own special container, so dependencies do not affect your host
+ - <link type="seealso" href="https://github.com/trigg/Discover">Discover Overlay</link>
+   - It has a <link type="seealso" href="https://trigg.github.io/Discover/bazzite">special configuration</link> for Bazzite where it automatically starts when you are in Game Mode and Discord is running on Steam Deck/HTPC images
+ - <link type="seealso" href="https://gitlab.gnome.org/chergert/prompt">Ptyxis</link>
+   - Terminal with first-class container support
+ - <link type="seealso" href="https://github.com/casey/just"><code>ujust</code></link>
+   - Execute custom commands based on recipes
+     - See some example commands <link type="seealso" href="https://universal-blue.discourse.group/docs?topic=42">here</link>
+ - <link type="seealso" href="https://github.com/ublue-os/yafti/">YAFTI (Bazzite Portal)</link>
+   - First-boot utility for installing additional software
+       - Currently looking for a <link type="seealso" href="https://universal-blue.discourse.group/docs?topic=38">contributor</link> who feels comfortable with Python to improve it</p>
+</section>
+
+<section>
+ <title>Wayland or X11?</title>
+ <p><link type="seealso" href="https://wayland.freedesktop.org/">Wayland</link> and <link type="seealso" href="https://www.x.org/wiki/">X11</link> (also known as Xorg or the X Window System) are windowing systems for desktop Linux.</p>
+ <list>
+ <item><p>Wayland is the <em style="strong">default</em> and recommended option for Bazzite</p></item>
+ <item><p>X11 is a legacy windowing system</p></item>
+ </list>
+ <p>Open a terminal and enter:
+ <code>command
+ echo $XDG_SESSION_TYPE</code>
+ It will display if your session is on Wayland or X11.</p>
+ <p>You can swap between Wayland and X11 in the login screen.</p>
+ <p><em style="strong">Note:</em>  If you are using one of the Steam Deck images and want to use X11, then check out how <link type="seealso" href="https://universal-blue.discourse.group/docs?topic=37">this documentation</link>.</p>
+</section>
+
+<section>
+ <title>Where is the <code>dnf</code> package manager?</title>
+ <p><link type="seealso" href="https://github.com/rpm-software-management/dnf"><code>dnf</code></link> is not included on Bazzite.  The preferred method of obtaining packages is using Flatpak or container methods like <link type="seealso" href="https://distrobox.it/">Distrobox</link> and <link type="seealso" href="https://containertoolbx.org/">Toolbx</link> which allows users to run a Fedora Linux container granting them access to this package manager without having tons of dependencies affecting their host system.</p>
+ <p>See the https://universal-blue.discourse.group/docs?topic=35 documentation for more methods on installing applications.</p>
+ <p>If a system-level package is required, then you can layer it to your image with <link type="seealso" href="https://universal-blue.discourse.group/docs?topic=513"><code>rpm-ostree</code></link> and reboot the device.  Layered packages persist between updates if they are not problematic.  Most of the packages available in Fedora can be layered to your image usually.</p>
+ <p><em style="strong">NOTE:</em> Updates will take longer to download with tons of packages layered to your image.</p>
+</section>
+
+<section>
+ <title>How do I report a bug?</title>
+ <p>First, see if the bug is already fixed in an update by <link type="seealso" href="https://universal-blue.discourse.group/docs?topic=36">manually updating the system</link>, then rebooting to see if the issue still persists between updates.</p>
+ <p>If the bug is still present, then explain the issue in our <link type="seealso" href="https://github.com/ublue-os/bazzite/issues">issue tracker</link>.   </p>
+ <p>Please provide a log or terminal output, if possible, so we can troubleshoot the issue properly.</p>
+</section>
+
+
+</page>

@@ -4,5 +4,49 @@
 <info>
   <link type="guide" xref="index"/>
 </info>
-<title>Handheld Information</title>
+<title>3. Handheld Information</title>
+
+<section>
+  <subtitle> Steam Deck </subtitle>
+  <p><em style="strong">Yes</em>.  </p>
+  <p>If a BIOS update is available then it will install when you update Bazzite normally.  It also supports controller firmware updates too.</p>
+  <p>If desired, there is a  <em style="strong">command to disable BIOS updates</em> at your own risk:
+  <code>ujust disable-bios-updates</code></p>
+</section>
+
+<section>
+  <subtitle>Alternative Handhelds </subtitle>
+ <p><em style="strong">Note</em>: It is imperative to read documentation from each item for more information.</p>
+ <p>If you're using this image on a handheld that is <em style="strong">not</em> the Steam Deck, then you can get TDP control via the <link type="seealso" href="https://github.com/aarron-lee/SimpleDeckyTDP">SimpleDeckyTDP</link> plugin.</p>
+ <steps>
+ <item><p>Open the terminal and install <link type="seealso" href="https://decky.xyz/">Decky Loader</link> with this <em style="strong">command</em>:
+ <code>ujust setup-decky</code></p></item>
+ <item><p>Install SimpleDeckyTDP:
+ <code>ujust setup-decky simpledeckytdp</code></p></item>
+ </steps>
+</section>
+
+<section>
+ <subtitle><em style="strong">Specific Handheld Commands</em>:</subtitle>
+ <p>Make sure to install <link type="seealso" href="https://docs.deckthemes.com/CSSLoader/Install/#linux-or-steam-deck">CSS Loader</link> from the Decky plugin store <em style="strong">after</em> installing Decky.</p>
+ <p>If you're using a handheld supported by <link type="seealso" href="https://github.com/hhd-dev/hhd">hhd</link> (Such as the Lenovo Legion Go and the ASUS Ally), then you can also get the plugin to integrate an option menu for it into game mode <em style="strong">with</em>:</p>
+ <p><code>ujust setup-decky hhd-decky</code></p>
+ <p><em style="strong">Be sure to also read the <link type="seealso" href="https://github.com/hhd-dev/hhd#after-install">hhd documentation</link> because some handhelds require specific setting changes and tweaks to function properly.</em></p>
+</section>
+
+<section>
+ <subtitle>Install <link type="seealso" href="https://github.com/semakusut/SBP-ROG-Ally">ROG Ally Theme for CSS Loader</link></subtitle>
+ <p><code>ujust install-rog-ally-theme</code></p>
+</section>
+
+<section>
+ <subtitle>Install <link type="seealso" href="https://github.com/frazse/SBP-Legion-Go-Theme">Lenovo Legion Go for CSS Loader</link></subtitle>
+ <p><code>ujust install-legion-go-theme</code></p>
+</section>
+
+<section>
+ <subtitle>Install <link type="seealso" href="https://github.com/frazse/PS5-to-Xbox-glyphs">PS5-to-Xbox glyph theme for hhd &amp; CSS Loader</link></subtitle>
+ <p><code>ujust install-hhd-xbox-glyph-theme</code></p>
+</section>
+
 </page>

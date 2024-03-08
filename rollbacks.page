@@ -4,5 +4,30 @@
 <info>
   <link type="guide" xref="updatesrollbacksrebase"/>
 </info>
-<title>Rollbacks</title>
+<title>2. Rollbacks</title>
+
+<section>
+ <title>How do I rollback a system update?</title>
+ <p>You can rollback in the GRUB menu (the menu you see before booting into Bazzite) by choosing the previous boot entry.  </p>
+ <p>It shows your current (<code>:0</code>) and your previous (<code>:1</code>) deployments, but due to a bug upstream there may be duplicates below them.</p>
+ <p>Your personal files will NOT be affected by this, and you can still update to the newest builds on older system builds.</p>
+ <p><em style="strong">NOTE:</em> Steam Deck/HTPC/Handheld PC images do not show the GRUB menu by default, so when you boot up your device press B on the Steam Deck or Esc on a physical keyboard for it to appear.  </p>
+ <p>Alternatively, <em style="strong">enter in a terminal</em>:</p>
+ <p><code>ujust unhide-grub</code></p>
+</section>
+
+<section>
+ <title>How do I save my current deployment?</title>
+ <p>You can pin your current deployment with this <em style="strong">command</em>:
+ <code>sudo ostree admin pin 0</code>
+ In a host terminal for a backup save state of your current system to easily rollback to if a new system update causes issues. </p>
+</section>
+
+<section>
+ <title>How do I rollback to my last deployment?</title>
+ <p>A rollback can be done by <em style="strong">entering in a host terminal.</em>:
+ <code>command
+ rpm-ostree rollback</code> </p>
+</section>
+
 </page>
