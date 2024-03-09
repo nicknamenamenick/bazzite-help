@@ -1,0 +1,172 @@
+<page xmlns="http://projectmallard.org/1.0/"
+ type="guide" id="apps">
+
+<info>
+    <link type="guide" xref="index#nav"/>
+
+    <desc></desc>
+    <?http header="X-Generator: html2mallard" ?>
+</info>
+
+<title>Apps</title>
+
+
+<section>
+ <title>1. <link type="seealso" href="https://www.flatpak.org/">Flatpak</link></title>
+ <p><media type="image" src="upload://v8VIuTILkstytNrPebI3WTobWtS.png" mime="image/png" /></p>
+ <p>Flatpak is the primary method of installing applications on Bazzite.  </p>
+ <p>It is a universal containerized package format that tries to sandbox applications through flexible permissions that the application has access to on your system.</p>
+ <p><em style="strong">Typically it is recommended to use Flatpak for most software when possible.</em>  </p>
+ <p><media type="image" src="upload://7eXW7jIZAYeKMUVOCf0daVYKX2n.png" mime="image/png" /> <media type="image" src="upload://i4jmn9qO4tJkCIKbE6iOLCRkPtR.png" mime="image/png" /></p>
+ <p>These can be installed via the software center that is pre-installed like <em>Discover</em> or <em>GNOME Software</em> depending on the desktop environment. </p>
+ <p><em style="strong">Alternatively open a host terminal and enter</em>:
+ <code>flatpak install &lt;application&gt;</code></p>
+ <p>The default Flatpak remote is from <link type="seealso" href="https://flathub.org/">Flathub</link>.  Take a look at the <link type="seealso" href="https://flathub.org/apps/collection/popular/1">most popular applications</link>.</p>
+ <p>Manage Flatpaks with <link type="seealso" href="https://github.com/tchx84/Flatseal">Flatseal</link> and <link type="seealso" href="https://github.com/flattool/warehouse">Warehouse</link> which are both pre-installed.</p>
+ <p>Both "system" and "user" Flathub remotes are enabled by default.  Bazzite pre-installs default applications with the system remote, and is mainly intended for multi-user systems.  Some applications may require the system remote however.</p>
+ <p>Read more about system versus user Flathub remotes in their <link type="seealso" href="https://docs.flathub.org/docs/for-users/user-vs-system-install/">documentation</link>.</p>
+</section>
+
+<section>
+ <title>2. <link type="seealso" href="https://universal-blue.discourse.group/docs?topic=42"><code>ujust</code></link></title>
+ <p><media type="image" src="upload://oLQaiumjX8VV6x2WrJFSZIVoDR4.png" mime="image/png" /></p>
+ <p>Technically <code>ujust</code> is <em style="strong">not</em> a package format, but convenience commands that automate tasks using scripts.</p>
+ <p>It can be used to install certain software, but there are also commands for system configuration and maintenance too.</p>
+ <p>Open a host terminal and <em style="strong">enter</em>:</p>
+ <p><code>ujust</code> 
+ This will output a list of available commands.</p>
+ <p><media type="image" src="upload://8Rkc2Qe1CYy3MBwS2CA4Uf5rqzq.png" mime="image/png" /></p>
+ <p>This will show all possible commands.</p>
+ <p><em style="strong">Find the command you want to use and enter</em>:
+ <code>ujust &lt;command&gt;</code></p>
+ <p>You can search for specific commands by <em style="strong">entering</em>:
+ <code>ujust | grep "&lt;search keyword(s)&gt;"</code></p>
+ <list>
+ <item><p><code>install-</code>: Install program, there is no configurations or uninstall commands</p></item>
+ <item><p><code>get-</code>: Install an "extension" like Decky plugins, and if it is an extension then it can use <code>get-</code> too</p></item>
+ <item><p><code>setup-</code>: Install program, provides uninstall and configuration options for after install</p></item>
+ <item><p><code>configure-</code>: Configure something that came by default on the image</p></item>
+ <item><p>If it must be installed first, then it will be in <code>setup-</code></p></item>
+ <item><p><code>toggle-</code>: Turns something on/off</p></item>
+ <item><p>Selection might be automatic or manual depending on implementation</p></item>
+ <item><p><code>fix-</code>: Fixes, patches or works around an issue</p></item>
+ <item><p><code>distrobox-</code>: Distrobox exclusive verb for useful Distrobox stuff</p></item>
+ <item><p><code>toolbox-</code>: Like the above Distrobox commands, but for Toolbx</p></item>
+ <item><p><code>foo</code>: Replace this with whatever the command is called </p></item>
+ <item><p>Essentially these are shortcuts that we have deemed necessary to not have a verb (ex: <code>ujust update</code> and <code>ujust enroll-secureboot-key</code>)</p></item>
+ </list>
+</section>
+
+<section>
+ <subtitle>View each <code>ujust</code> script's source code</subtitle>
+ <p>If you would like to see what each script does for each command then open a host terminal and <em style="strong">enter</em>:
+ <code>ujust --show &lt;command&gt;</code></p>
+ <p>Alternatively, you can find the <code>ujust</code> commands locally in:
+ <code>/usr/share/ublue-os/just</code></p>
+</section>
+
+<section>
+ <title>3. <link type="seealso" href="https://youtu.be/vZ1LRe_foJY?feature=shared&amp;t=684">Linux Container Environments</link></title>
+ <p><media type="image" src="upload://7QZFY97vRxZIU4vcW8CIjGi1nIJ.jpeg" mime="image/png" /></p>
+ <p>Run other minimal variants of popular Linux distributions in Bazzite inside of a container.  Access each distribution's packages without any of their dependencies and libraries affecting the host machine.</p>
+ <p>Using this method to obtain software <em style="strong">requires knowledge of how traditional Linux operating systems install packages</em>.  It is best to create a test container to familiarize yourself with either Distrobox or Toolbx.</p>
+ <p><em style="strong">Package Mangers for a Small List of Linux Distributions</em>:
+ | OS | Package Manager
+ | -------- | -------- |
+ <link type="seealso" href="https://github.com/ublue-os/bazzite-arch">Bazzite-Arch</link> | <link type="seealso" href="https://github.com/Morganamilo/paru?tab=readme-ov-file#examples"><code>paru</code></link> |
+ | <link type="seealso" href="https://fedoraproject.org/">Fedora</link> | <link type="seealso" href="https://docs.fedoraproject.org/en-US/quick-docs/dnf/"><code>dnf</code></link>   |
+ | <link type="seealso" href="https://archlinux.org/">Arch Linux</link>| <link type="seealso" href="https://wiki.archlinux.org/title/Pacman"><code>pacman</code></link>
+ | <link type="seealso" href="https://www.debian.org/">Debian</link> / <link type="seealso" href="https://ubuntu.com/">Ubuntu</link> | <link type="seealso" href="https://ubuntu.com/server/docs/package-management"><code>apt</code></link>   |
+ | <link type="seealso" href="https://get.opensuse.org/">OpenSUSE</link>|  <link type="seealso" xref="https://documentation.suse.com/smart/systems-management/html/concept-zypper/index"><code>zypper</code></link>  |
+ | <link type="seealso" href="https://voidlinux.org/">Void Linux</link> | <link type="seealso" xref="https://docs.voidlinux.org/xbps/index"><code>xbps</code></link>   |
+ | <link type="seealso" href="https://www.alpinelinux.org/">Alpine Linux</link> | <link type="seealso" href="https://wiki.alpinelinux.org/wiki/Alpine_Package_Keeper"><code>apk</code></link>   |</p>
+ <p>See our <link type="seealso" href="https://universal-blue.discourse.group/docs?topic=300">Ptyxis documentation</link> on how containers integrate with your system.</p>
+</section>
+
+<section>
+ <subtitle><link type="seealso" href="https://distrobox.it/">Distrobox</link></subtitle>
+ <p><media type="image" src="upload://p0qiLk4DY2QMJKPFZ6pNItOlhim.png" mime="image/png" /></p>
+ <p>Distrobox containers are running sub-systems of other popular <link type="seealso" href="https://distrobox.it/compatibility/#containers-distros">Linux distributions</link> with access to their package managers (<code>apt</code>, <code>dnf</code>, <code>pacman</code>, etc.) and their package formats (<code>.deb</code>/<code>.rpm</code>) </p>
+ <p>Distrobox containers can be made with the host terminal following this <em style="strong">command</em>:
+ <code>ujust distrobox</code> </p>
+ <p><media type="image" src="upload://rqzTC1SNKDUvke2aOWaiM27zjWg.png" mime="image/png" /></p>
+ <p>The <em style="strong">default</em> container is our Bazzite-Arch container which gives users access to the <link type="seealso" href="https://aur.archlinux.org/packages">Arch User Repository</link>.</p>
+ <p>Swap between different containers and your host with the terminal or alternatively <em style="strong">enter</em>:
+ <code>distrobox enter &lt;container&gt;</code></p>
+ <p>Applications with a graphical user interface can integrate with your system with an application shortcut <em style="strong">entering this command inside of the container</em>:</p>
+ <p><code>bash
+ distrobox-export --app &lt;package&gt;</code></p>
+ <p><media type="image" src="upload://cJqlP7zgD8T7D2kMKklM1zfv3nt.png" mime="image/png" /></p>
+ <p>Distrobox containers can be created and managed graphically with <link type="seealso" href="https://github.com/Dvlv/BoxBuddyRS">BoxBuddy</link>.</p>
+ <p>Check out these other Distrobox <link type="seealso" href="https://universal-blue.discourse.group/docs?topic=44">tips</link> too.</p>
+ <p><em style="strong">Advanced users</em>: Declare Distrobox containers with <link type="seealso" href="https://distrobox.it/usage/distrobox-assemble/"><code>distrobox-assemble</code></link>.</p>
+</section>
+
+<section>
+ <subtitle><link type="seealso" href="https://containertoolbx.org/">Toolbx</link></subtitle>
+ <p><media type="image" src="upload://kq1XvV64XH2DEAw6JwkIprF1yoF.png" mime="image/png" /></p>
+ <p>Toolbx  is similar to Distrobox and is the default container method in upstream Fedora Atomic.</p>
+ <p>It allows users to run Linux containers on your host.</p>
+ <p><em style="strong">Open a host terminal and enter</em>:</p>
+ <p><code>toolbox create</code>
+ <em style="strong">Enter a toolbox with</em> 
+ <code>toolbox enter &lt;container&gt;</code>
+ The <em style="strong">default</em> container is the latest stable Fedora release which gives users access to the <code>dnf</code> package manager quickly:</p>
+ <p><code>sudo dnf install &lt;package&gt;</code>
+ View the <link type="seealso" href="https://github.com/toolbx-images/images?tab=readme-ov-file#available-distributions-and-usage">supported Linux distributions</link> that can be used with Toolbx.</p>
+ <p>Read <link type="seealso" href="https://docs.fedoraproject.org/en-US/fedora-silverblue/toolbox/">upstream documentation</link> for more information.</p>
+</section>
+
+<section>
+ <title>4. <link type="seealso" href="https://appimage.org/">AppImage</link></title>
+ <p><media type="image" src="upload://lehDJcnEbMe0rImBgX8cKvhysfh.png" mime="image/png" /></p>
+ <p>AppImage is a universal package format that attempts to bundle every dependency that an application needs into one portable file.</p>
+ <p>AppImages can be installed by downloading any file with a <code>.AppImage</code> extension and then giving it executable permissions in the file's properties so the application can run properly.</p>
+ <p>Typically, AppImages can be installed from a project's website, <link type="seealso" href="https://www.appimagehub.com/">AppImage Hub</link> or if you install <link type="seealso" href="https://flathub.org/apps/io.github.prateekmedia.appimagepool">AppImage Pool</link>.</p>
+ <p>Manage AppImages with the <link type="seealso" href="https://github.com/mijorus/gearlever">Gear Lever</link> application that is pre-installed.</p>
+ <p><em style="strong">NOTE</em>: AppImages may not be supported if rebasing to another Universal Blue image.</p>
+</section>
+
+<section>
+ <title>5. <link type="seealso" href="https://universal-blue.discourse.group/docs?topic=513">rpm-ostree</link></title>
+ <p><media type="image" src="upload://11DT7DinQfjfEfVbXh14ImV6yaL.png" mime="image/png" /></p>
+ <p>Obtain Fedora Linux packages like you typically would with the package manager.  </p>
+ <p>This is known as "layering packages" to the image.  </p>
+ <p>This will require a system reboot when it finishes creating the new deployment with the package(s) added to your image.</p>
+</section>
+
+<section>
+ <subtitle>Common <code>rpm-ostree</code> Terminal Commands:</subtitle>
+ <p><code>rpm-ostree install &lt;package&gt;</code>
+ Installs Fedora package to the system that stay between updates.</p>
+ <p><code>rpm-ostree uninstall &lt;package&gt;</code> 
+ Uninstall any layered packages added to the system.</p>
+ <p><code>rpm-ostree search &lt;package&gt;</code>
+ Search for Fedora packages that can be installed.</p>
+</section>
+
+<section>
+ <subtitle>RPM packages installed on the host</subtitle>
+ <p>Fedora containers should be used for most RPM files, but sometimes they need to be installed to your host.</p>
+ <p>You can install RPM files <em style="strong">to your host</em> with <code>rpm-ostree</code> by entering:
+ <code>rpm-ostree install &lt;package&gt;.rpm</code>
+ You may need to copy the full path (<code>/path/to/rpmfile.rpm</code>) for it to install properly.</p>
+</section>
+
+<section>
+ <subtitle>How do I install <link type="seealso" href="https://copr.fedorainfracloud.org">COPR</link> repositories?</subtitle>
+ <p>Download the .repo file and save it to <code>/etc/yum.repos.d/</code>.  </p>
+ <p>Then install the package with <code>rpm-ostree</code>.</p>
+ <p>If you experience problems updating your system due to GPG signature issues, then this can be fixed by either removing the COPR repository, or editing the file by changing <code>gpgcheck=1</code> to <code>gpgcheck=0</code> (or similar) and saving it <em style="strong">at your own risk</em>.</p>
+</section>
+
+<section>
+ <subtitle>Caveats</subtitle>
+ <p>Layering packages are mostly intended for system-level applications, libraries, and other dependencies.</p>
+ <p>However, it is highly recommended to only use this command when absolutely necessary especially if the application can be obtained through other methods. </p>
+ <p>If you run into issues upgrading due to a layered package conflict, then either optionally uninstall the conflicted package(s) or remove all layered packages with:</p>
+ <p><code>rpm-ostree reset</code></p>
+</section>
+
+
+</page>
