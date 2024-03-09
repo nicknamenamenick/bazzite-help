@@ -1,0 +1,28 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="guide"
+      id="credits">
+<info>
+  <link type="guide" xref="index"/>
+</info>
+ <title>11 - Credits</title>
+<section>
+    <subtitle>Universal Blue</subtitle>
+    <p>[List maintainers here]</p>
+</section>
+<section>
+ <subtitle>Special Thanks</subtitle>
+ <p>Bazzite is a community effort and wouldn't exist without everyone's support. Below are some of the people who've helped us along the way:</p>
+ <list>
+ <item><p><link type="seealso" href="https://github.com/reisvg">rei.svg</link> - For creating our logo and overall branding.</p></item>
+ <item><p><link type="seealso" href="https://github.com/SuperRiderTH">SuperRiderTH</link> - For creating our Steam game mode startup video.</p></item>
+ <item><p><link type="seealso" href="https://gitlab.com/evlaV">evlaV</link> - For making Valve's code available and for being <link type="seealso" href="https://xkcd.com/2347/">this person</link>.</p></item>
+ <item><p><link type="seealso" href="https://chimeraos.org/">ChimeraOS</link> - For gamescope-session and for valuable support along the way.</p></item>
+ <item><p><link type="seealso" href="https://github.com/Jovian-Experiments">Jovian-NixOS</link> - For supporting us with technical issues and for creating a similar project. Seriously, go check it out. It's our Nix-based cousin.</p></item>
+ <item><p><link type="seealso" href="https://copr.fedorainfracloud.org/coprs/sentry/">sentry</link> - For assistance with needed kernel patches and for creating the <link type="seealso" href="https://copr.fedorainfracloud.org/coprs/sentry/kernel-fsync/">kernel-fsync repo</link> we now use.</p></item>
+ <item><p><link type="seealso" href="https://github.com/nicknamenamenick">nicknamenamenick</link> - For being the MVP nearly single-handedly upkeeping our documentation and support literature, and countless cases of helping users.</p></item>
+ <item><p><link type="seealso" href="https://deckbrew.xyz">Steam Deck Homebrew</link> - For choosing to support distributions other than SteamOS despite the extra work, and a special thanks to <link type="seealso" href="https://github.com/PartyWumpus">PartyWumpus</link> for getting Decky Loader working with SELinux for us.</p></item>
+ <item><p><link type="seealso" href="https://github.com/cyrv6737">cyrv6737</link> - For the initial inspiration and the base that became bazzite-arch.</p></item>
+ </list>
+</section>
+
+</page>

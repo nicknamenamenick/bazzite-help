@@ -4,7 +4,13 @@
 <info>
   <link type="guide" xref="index"/>
 </info>
-<title>1. General</title>
+<title>01 - General Information</title>
+
+<section>
+ <title>What is Bazzite?</title>
+ <p>Bazzite is a custom image of Fedora Atomic intended for gaming. </p>
+
+</section>
 
 <section>
  <title>How do I change my hostname?</title>
