@@ -1,12 +1,12 @@
 # bazzite-help
 Example linux yelp-based help documentation, using `yelp-tools` for freedesktop.org compliant linux help.
 
-# Instructions
+## Instructions
 
 ## Dev Container
 Open this project using the given devcontainer specification
 
-## Building
+### Building
 
 ```bash
 make
@@ -14,13 +14,13 @@ make
 
 Output file will be `index.epub`
 
-## Cleaning
+### Cleaning
 
 ```bash
 make clean
 ```
 
-## Reading Help File
+### Reading Help File
 
 From the host:
 
@@ -28,6 +28,6 @@ From the host:
 yelp .
 ```
 
-## References Directory
+### References Directory
 
 These are translated from the [Discourse documentation](https://docs.bazzite.gg) using [html2mallard](https://pypi.org/project/html2mallard/).  Personally, I cherry pick from these reference files.
