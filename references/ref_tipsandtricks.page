@@ -1,0 +1,135 @@
+<page xmlns="http://projectmallard.org/1.0/"
+ type="guide" id="tipsandtricks">
+
+<info>
+    <link type="guide" xref="index#nav"/>
+
+    <desc></desc>
+    <?http header="X-Generator: html2mallard" ?>
+</info>
+
+<title>Tipsandtricks</title>
+
+
+<section>
+ <title>Gaming</title>
+ <p>Check out our <link type="seealso" href="https://universal-blue.discourse.group/docs?topic=31">Gaming Guide</link> for additonal resources.</p>
+</section>
+
+<section>
+ <title>Source 1 Game Issues (Team Fortress 2, Left 4 Dead 2, etc.)</title>
+</section>
+
+<section>
+ <subtitle>Games are not launching</subtitle>
+ <p>If a 32-bit Source 1 engine game is not opening due to <link type="seealso" href="https://github.com/ValveSoftware/csgo-osx-linux/issues/3229">tmalloc libraries issues</link>, then open a host terminal and enter:</p>
+ <p>```
+ ujust patch-source1-tcmalloc
+ ```` 
+ Follow the directions that display on the terminal output.</p>
+</section>
+
+<section>
+ <subtitle>Audio and custom content issues</subtitle>
+ <p>Missing voice lines or custom content not loading in Source games?  <link type="seealso" href="https://github.com/ValveSoftware/steam-for-linux/issues/43">SELinux is blocking mp3 decoding and other middleware because it executes heap memory</link>.</p>
+ <p>Team Fortress 2 will eventually fix this issue in an upcoming update to the stable branch.  The current 64-bit and Vulkan beta branch have resolved this issue.</p>
+ <p><em style="strong">At your own risk</em></p>
+ <steps>
+ <item><p>Open a host terminal and <em style="strong">enter these 4 commands</em>:</p></item>
+ </steps>
+ <p><code>sudo su</code></p>
+ <p><code>command
+ cd /tmp</code></p>
+ <p><code>command
+ ausearch -c 'hl2_linux' --raw | audit2allow -M my-hl2linux</code></p>
+ <p><code>command
+ semodule -X 300 -i my-hl2linux.pp</code></p>
+ <steps>
+ <item><p>Reboot your device</p></item>
+ </steps>
+</section>
+
+<section>
+ <title>Software</title>
+ <p>Read our <link type="seealso" href="https://universal-blue.discourse.group/docs?topic=35">software documentation</link> for methods on installing most software before proceeding.</p>
+</section>
+
+<section>
+ <title>Wallpaper Engine Guide (Only on KDE images)</title>
+ <p><link type="seealso" href="https://www.wallpaperengine.io/en">Wallpaper Engine</link> is a live wallpaper application intended for Windows.</p>
+ <p><media type="image" src="upload://1zYRH67Nhl9JRUovBbeBDQDGzxT.jpeg" mime="image/png" /></p>
+ <p><media type="image" src="upload://fw4SsMtgkTiQulwjCZoTfnWqfMq.png" mime="image/png" /></p>
+ <p>It <em>can</em> work on Bazzite if you are using the KDE Plasma images.</p>
+ <p>Read this <link type="seealso" href="https://github.com/catsout/wallpaper-engine-kde-plugin?tab=readme-ov-file#usage">guide</link> on how to set it up on KDE Plasma</p>
+ <p><em style="strong">Note</em>: Not all wallpapers are compatible and may even cause issues since most are not intended for use on the Linux desktop.</p>
+</section>
+
+<section>
+ <title>Installing DaVinci Resolve</title>
+ <p><link type="seealso" href="https://www.blackmagicdesign.com/products/davinciresolve">DaVinci Resolve</link> is an industry standard professional visual effects and video editor by Blackmagic Design.</p>
+ <steps>
+ <item><p>Open a host terminal and <em style="strong">enter</em>:</p></item>
+ </steps>
+ <p><code>ujust distrobox</code>
+ 2. Select "New"
+ 3.  When it asks for an image name, <em style="strong">enter</em>:
+ <code>ghcr.io/zelikos/davincibox:latest</code>
+ 4.  Name your container: <code>davincibox</code>
+ 5. Download DaVinci Resolve (requires you to register an account)
+ 6.  Extract the archive to any directory you want
+ 7. In your host terminal, run <code>--appimage-extract</code> on your DaVinci Resolve installer:
+ <code>command
+ /path/to/DaVinci_Resolve_version_Linux.run --appimage-extract</code>
+ 8. Then run this command in the container:
+ <code>distrobox enter davincibox -- setup-davinci /path/to/DaVinci_Resolve_version_Linux.run distrobox</code></p>
+ <p><em style="strong">Note</em>: Replace <code>/path/to/...</code> with the correct location of this binary.</p>
+ <p>Important notes from the project:</p>
+
+ <p>The suffix at the end is for the <code>add-davinci-launcher</code> script. If omitted, setup will still run, but adding the launcher to your application menu won't work.</p>
+ <p>You can still run <code>add-davinci-launcher</code> separately, as either <code>add-davinci-launcher distrobox</code> or <code>add-davinci-launcher toolbox</code>, depending on what you're using.</p>
+ <p>After installation completes, you can remove the <code>squashfs-root</code> directory.</p>
+
+ <p>Read more about <link type="seealso" href="https://github.com/zelikos/davincibox">davincibox</link> for both upgrade instructions and more information on the container.</p>
+</section>
+
+<section>
+ <title>System</title>
+ <p>View our <link type="seealso" href="https://universal-blue.discourse.group/docs?topic=33">FAQ</link> for the underlying technology Bazzite utilizes.</p>
+</section>
+
+<section>
+ <title>How do I install custom KDE Plasma themes?</title>
+ <p>KDE Plasma is the default Bazzite desktop environment and is highly customizable.  One of the various customization that can be done is installing custom styles, cursors, and icons to your system with custom themes made by the community.</p>
+ <p>Do <em style="strong">not</em> install themes with the built-in KDE system settings installer since it may not install properly because the filesystem is slightly different than most Linux operating systems.  Install themes manually into your Home directory and follow instructions from the autho if necessary.</p>
+ <p><media type="image" src="upload://8N6JKQAYxVv6dcSCsUmMmKtR1Lm.png" mime="image/png" /></p>
+</section>
+
+<section>
+ <subtitle>Universal instructions for most custom themes</subtitle>
+ <steps>
+ <item><p>Download the theme manually from the <link type="seealso" href="https://store.kde.org/browse/">KDE Store</link></p></item>
+ <item><p>Extract the contents to <code>~/.local/share/plasma/</code> (you may need to make the <code>plasma</code> directory)
+ 2a. "Global themes" are placed in <code>look-and-feel</code> (you may need to make this directory)
+ 2b. "Plasma themes" are placed in <code>desktoptheme</code> (you may need to make this directory)
+ 2c. "Icon/Cursor themes" are placed in <code>~/.icons</code>
+ 2ca. Some Flatpaks need filesystem permissions for applications that have issues with cursor themes (<code>~/.icons/:ro</code> in "Filesystem" in each problematic application or globally in Flatseal)</p></item>
+ <item><p>Open system settings and select your theme, style, cursor, etc. as it now should appear</p></item>
+ </steps>
+</section>
+
+<section>
+ <subtitle>Themes that require <code>kvantum</code></subtitle>
+ <p>Some themes require <link type="seealso" href="https://github.com/tsujan/Kvantum/blob/master/Kvantum/README.md"><code>kvantum</code></link> to be installed on the host system.</p>
+ <p>Open a host terminal and <em style="strong">enter</em>:
+ <code>rpm-ostree install kvantum</code> and reboot to install it.</p>
+ <p>A fantastic resource on KDE themes can be found <link type="seealso" href="https://itsfoss.com/properly-theme-kde-plasma/">here</link> for more information.</p>
+</section>
+
+<section>
+ <title>How do I change my hostname?</title>
+ <p>Edit the <code>/etc/hostname</code> file with a new hostname, save it,  and reboot. </p>
+ <p><code>sudoedit /etc/hostname</code></p>
+</section>
+
+
+</page>

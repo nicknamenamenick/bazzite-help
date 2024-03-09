@@ -1,0 +1,416 @@
+<page xmlns="http://projectmallard.org/1.0/"
+ type="guide" id="readme">
+
+<info>
+    <link type="guide" xref="index#nav"/>
+
+    <desc></desc>
+    <?http header="X-Generator: html2mallard" ?>
+</info>
+
+<title>Readme</title>
+
+<p align="center">
+  <link type="seealso" href="https://bazzite.gg/"><media type="image" src="/repo_content/Bazzite_Tagline.svg?raw=true" mime="image/png" /></link>
+</p>
+
+<p><link type="seealso" href="https://github.com/ublue-os/bazzite/actions/workflows/build.yml"><media type="image" src="https://github.com/ublue-os/bazzite/actions/workflows/build.yml/badge.svg" mime="image/png" /></link> <link type="seealso" href="https://github.com/ublue-os/bazzite/actions/workflows/build_iso.yml"><media type="image" src="https://github.com/ublue-os/bazzite/actions/workflows/build_iso.yml/badge.svg" mime="image/png" /></link></p>
+
+<section>
+ <title><link type="seealso" href="https://github.com/ublue-os/bazzite/blob/main/README.md">🇺🇸</link> <link type="seealso" href="https://github.com/ublue-os/bazzite/blob/main/README-SPA.md">🇪🇸</link> <link type="seealso" href="https://github.com/ublue-os/bazzite/blob/main/README-ID.md">🇮🇩</link></title>
+ <p align="center">
+   <link type="seealso" href="https://bazzite.gg/#image-picker"><media type="image" src="/repo_content/download.png?raw=true" mime="image/png" /></link>
+ </p>
+</section>
+
+<section>
+ <title>Table of Contents</title>
+ <list>
+ <item><p><link xref="#about--features">Features for <em style="strong">All</em> Bazzite Images</link></p></item>
+ <item><p><link xref="#desktop">Features for <em style="strong">Desktop</em> Images</link></p></item>
+ <item><p><link xref="#steam-deckhome-theater-pcs-htpcs">Features for <em style="strong">Steam Deck / HTPC</em> Images</link>
+ <link xref="#alternative-handhelds">Alternative Handhelds</link></p></item>
+ </list>
+
+ <item><p><link xref="#gnome">Features for <em style="strong">GNOME</em> Images</link></p></item>
+ <item><p><link xref="#features-from-upstream">Features from Upstream</link></p></item>
+ <item><p><link xref="#why">Why</link></p></item>
+ <item><p><link xref="#showcase">Showcase</link></p></item>
+ <item><p><link xref="#documentation--newsletters">Documentation &amp; Newsletters</link></p></item>
+ <item><p><link xref="#custom-packages">Custom Packages</link></p></item>
+ <item><p><link xref="#verification">Image Verification</link></p></item>
+ <item><p><link xref="#secure-boot">Secure Boot</link></p></item>
+ <item><p><link xref="#contributor-metrics">Metrics</link></p></item>
+ <item><p><link xref="#special-thanks">Special Thanks</link></p></item>
+ <item><p><link xref="#build-your-own">Building Your Own</link></p></item>
+ <item><p><link xref="#join-the-community">Community</link></p></item>
+</section>
+
+<section>
+ <title>About &amp; Features</title>
+ <p><link type="seealso" href="https://bazzite.gg/">Bazzite</link> is an OCI image that serves as an alternative operating system for the <link type="seealso" href="https://www.steamdeck.com/">Steam Deck</link>, and a ready-to-game SteamOS-like for desktop computers and living room home theater PCs.</p>
+ <p>Bazzite is built from <link type="seealso" href="https://github.com/ublue-os/main">ublue-os/main</link> and <link type="seealso" href="https://github.com/ublue-os/nvidia">ublue-os/nvidia</link> using <link type="seealso" href="https://fedoraproject.org/">Fedora</link> technology, which means expanded hardware support and built in drivers are included. Additionally, Bazzite adds the following features:</p>
+ <list>
+ <item><p>Uses the <link type="seealso" href="https://copr.fedorainfracloud.org/coprs/sentry/kernel-fsync/">fsync kernel</link> to achieve HDR and expanded hardware support, among numerous other included patches.</p></item>
+ <item><p>HDR available in Game mode.</p></item>
+ <item><p>NVK available on non-Nvidia builds.</p></item>
+ <item><p>Full hardware accelerated codec support for H264 decoding.</p></item>
+ <item><p>Full support for AMD's ROCM OpenCL/HIP run-times.</p></item>
+ <item><p><link type="seealso" href="https://github.com/medusalix/xone">xone</link> driver for Xbox controllers.</p></item>
+ <item><p>Full support for <link type="seealso" href="https://www.synaptics.com/products/displaylink-graphics">DisplayLink</link>.</p></item>
+ <item><p>Includes Valve's KDE themes from SteamOS.</p></item>
+ <item><p>Features optional Valve-inspired GTK3/4 themes matching Vapor and VGUI2 from SteamOS. Install <link type="seealso" href="https://flathub.org/apps/com.github.GradienceTeam.Gradience">Gradience</link> to make use of them.</p></item>
+ <item><p><link type="seealso" href="https://github.com/ishitatsuyuki/LatencyFleX">LatencyFleX</link>, <link type="seealso" href="https://github.com/DadSchoorse/vkBasalt">vkBasalt</link>, <link type="seealso" href="https://github.com/flightlessmango/Mangohud">MangoHud</link>, and <link type="seealso" href="https://github.com/nowrep/obs-vkcapture">OBS VkCapture</link> installed and available by default</p></item>
+ <item><p>Uses <link type="seealso" href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/monitoring_and_managing_system_status_and_performance/getting-started-with-tuned_monitoring-and-managing-system-status-and-performance">TuneD</link> in place of PPD, with full integration into GNOME, KDE, and Game mode. This is an incredibly powerful tool that Red Hat offers <link type="seealso" href="https://www.redhat.com/en/services/training/rh442-red-hat-enterprise-performance-tuning">entire classes on</link>.</p></item>
+ <item><p><link type="seealso" href="https://copr.fedorainfracloud.org/coprs/sentry/switcheroo-control_discrete/">Patched Switcheroo-Control</link> fixing default-broken iGPU/dGPU switching.</p></item>
+ <item><p>Support for <link type="seealso" href="https://www.wallpaperengine.io/en">Wallpaper Engine</link>. (Only on KDE)</p></item>
+ <item><p><link type="seealso" href="https://github.com/GerbilSoft/rom-properties">ROM Properties Page shell extension</link> included.</p></item>
+ <item><p>Full support for <link type="seealso" href="https://github.com/Frogging-Family/wine-tkg-git/issues/936">Winesync/Fastsync/NTsync</link>.</p></item>
+ <item><p><link type="seealso" href="https://github.com/89luca89/distrobox">Distrobox</link> preinstalled with automatic updates for created containers.</p></item>
+ <item><p><link type="seealso" href="https://gitlab.gnome.org/chergert/ptyxis">Ptyxis Terminal</link> used as the default in all images. This terminal is specifically designed for the container workflow you'll use in Bazzite. If you wish to return to stock, run <code>ujust restore-original-terminal</code></p></item>
+ <item><p>Automated <code>duperemove</code> and <code>rmlint</code> services for reducing the disk space used by wine prefix contents.</p></item>
+ <item><p>Support for HDMI CEC via <link type="seealso" href="https://libcec.pulse-eight.com/">libCEC</link>.</p></item>
+ <item><p><link type="seealso" href="https://github.com/pop-os/system76-scheduler">System76-Scheduler</link> preinstalled, providing automatic process priority tweaks to your focused application and keeping CPU time for background processes to a minimum.</p></item>
+ <item><p>Customized System76-Scheduler config with additional rules.</p></item>
+ <item><p>Uses <link type="seealso" href="https://github.com/google/bbr">Google's BBR TCP congestion control</link> by default.</p></item>
+ <item><p><link type="seealso" href="https://github.com/sezanzeb/input-remapper">Input Remapper</link> preinstalled and enabled. (Available but default-disabled on the Deck variant, may be enabled with <code>ujust restore-input-remapper</code>)</p></item>
+ <item><p>Bazzite Portal provides an easy way to install numerous applications and tweaks, including installing <link type="seealso" href="https://github.com/ilya-zlobintsev/LACT">LACT</link> and <link type="seealso" href="https://gitlab.com/leinardi/gwe">GreenWithEnvy</link>.</p></item>
+ <item><p><link type="seealso" href="https://waydro.id/">Waydroid</link> preinstalled for running Android apps. Set it up with this <link type="seealso" href="https://universal-blue.discourse.group/docs?topic=32">quick guide</link>.</p></item>
+ <item><p>Manage applications using <link type="seealso" href="https://github.com/tchx84/Flatseal">Flatseal</link>, <link type="seealso" href="https://github.com/flattool/warehouse">Warehouse</link>, and <link type="seealso" href="https://github.com/mijorus/gearlever">Gear Lever</link>.</p></item>
+ <item><p><link type="seealso" href="https://gitlab.com/CalcProgrammer1/OpenRGB">OpenRGB</link> i2c-piix4 and i2c-nct6775 drivers for controlling RGB on certain motherboards.</p></item>
+ <item><p><link type="seealso" href="https://openrazer.github.io">OpenRazer</link> drivers built in, Select OpenRazer in Bazzite Portal or run <code>ujust install-openrazer</code> in a terminal to begin using it.</p></item>
+ <item><p><link type="seealso" href="https://opentabletdriver.net/">OpenTabletDriver</link> udev rules built in, with the full software suite installable via Bazzite Portal or by running <code>ujust install-opentabletdriver</code> in a terminal.</p></item>
+ <item><p><link type="seealso" href="https://github.com/hannesmann/gcadapter-oc-kmod">GCAdapter_OC</link> driver for overclocking Nintendo's Gamecube Controller Adapter to 1000hz polling.</p></item>
+ <item><p>Out of the box support for <link type="seealso" href="https://wooting.io/">Wooting</link> keyboards.</p></item>
+ <item><p>Built in support for Southern Islands (HD 7000) and Sea Islands (HD 8000) AMD GPUs under the <code>amdgpu</code> driver.</p></item>
+ <item><p>A fix is available for <link type="seealso" href="https://github.com/ValveSoftware/Source-1-Games/issues/5043">a 32-bit Source 1 engine game bug (IE: TF2)</link> that makes the game crash on launch - <code>ujust fix-source1-tcmalloc</code></p></item>
+ <item><p><link type="seealso" href="https://invent.kde.org/system/xwaylandvideobridge">XwaylandVideoBridge</link> is available for Discord screensharing on Wayland.</p></item>
+ <item><p><link type="seealso" href="https://github.com/linuxmint/webapp-manager">Webapp Manager</link> is available for creating applications from websites for a variety of browsers, including Firefox.</p></item>
+ </list>
+</section>
+
+<section>
+ <subtitle>Desktop</subtitle>
+ <p>Common variant available as <code>bazzite</code>, suitable for desktop computers.</p>
+ <list>
+ <item><p>Automatic updates for the OS, Flatpaks, and all Distrobox containers - powered by <link type="seealso" href="https://github.com/ublue-os/ublue-update">ublue-update</link> and <link type="seealso" href="https://github.com/topgrade-rs/topgrade">topgrade</link>.</p></item>
+ </list>
+
+ <p>[!IMPORTANT]
+ <em style="strong">ISOs can be downloaded from our <link type="seealso" href="https://github.com/ublue-os/bazzite/releases">releases page</link>, and a helpful install guide can be found <link type="seealso" href="https://universal-blue.discourse.group/docs?topic=30">here</link>.</em></p>
+
+ <p>Rebase from an existing upstream Fedora Atomic to this image:</p>
+ <p><code>bash
+ rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/bazzite:stable</code></p>
+ <p>or for devices with Nvidia GPUs:</p>
+ <p><code>bash
+ rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/bazzite-nvidia:stable</code></p>
+ <p><em style="strong">For users with Secure Boot enabled:</em> Follow our <link xref="#secure-boot">secure boot documentation</link> prior to rebasing.</p>
+</section>
+
+<section>
+ <subtitle>Steam Deck/Home Theater PCs (HTPCs)</subtitle>
+
+ <p>[!IMPORTANT]
+ Devices that are NOT the Steam Deck can still use the <code>bazzite-deck</code> images, but must use a modern AMD GPU. Intel Arc GPUs also have been confirmed to work.</p>
+
+ <p>Variant designed for usage as an alternative to SteamOS on the Steam Deck, and for a console-like experience on HTPCs, available as <code>bazzite-deck</code>:</p>
+ <list>
+ <item><p>Directly boots to Game mode matching SteamOS's behavior.</p></item>
+ <item><p><em style="strong">Automatic <code>duperemove</code> greatly trims the size of compatdata.</em></p></item>
+ <item><p><em style="strong">Latest version of Mesa creates smaller shader caches and does not require them to prevent stutter.</em></p></item>
+ <item><p><em style="strong">Able to be booted even if the drive is full.</em></p></item>
+ <item><p><em style="strong">Support for every language supported by upstream Fedora.</em></p></item>
+ <item><p><em style="strong">Uses Wayland on the desktop with <link type="seealso" href="https://github.com/Supreeeme/extest">support for Steam input</link>.</em></p></item>
+ <item><p>Includes <link type="seealso" href="https://github.com/hhd-dev/hhd">HHD</link> for expanded input support on non-Valve handhelds. </p></item>
+ <item><p>Features ported versions of most SteamOS packages, including drivers, firmware updaters, and fan controllers <link type="seealso" href="https://gitlab.com/evlaV">from the evlaV repository</link>.</p></item>
+ <item><p>Patched Mesa for proper framerate control from Gamescope.</p></item>
+ <item><p>Comes with patches from <link type="seealso" href="https://gitlab.com/popsulfr/steamos-btrfs">SteamOS BTRFS</link> for full BTRFS support for the SD card by default.</p></item>
+ <item><p>Ships with a ported copy of <link type="seealso" href="https://github.com/kmicki/SteamDeckGyroDSU">SDGyroDSU</link>, enabled by default.</p></item>
+ <item><p>Option to install <link type="seealso" href="https://github.com/SteamDeckHomebrew/decky-loader">Decky Loader</link>, <link type="seealso" href="https://www.emudeck.com/">EmuDeck</link>, <link type="seealso" href="https://retrodeck.net/">RetroDECK</link>, and <link type="seealso" href="https://davidotek.github.io/protonup-qt/">ProtonUp-Qt</link>, among numerous other useful packages on installation.</p></item>
+ <item><p>Custom update system allows for the OS, Flatpaks, and Distrobox images to be updated directly from the Game mode UI powered by <link type="seealso" href="https://github.com/ublue-os/ublue-update">ublue-update</link> and <link type="seealso" href="https://github.com/topgrade-rs/topgrade">topgrade</link>.</p></item>
+ <item><p>Built in support for Windows dual-boot thanks to Fedora's installation of GRUB being left intact.</p></item>
+ <item><p>Update break something? Easily roll back to the previous version of Bazzite thanks to <code>rpm-ostree</code>'s rollback functionality. You can even select previous images at boot.</p></item>
+ <item><p>Steam and Lutris preinstalled on the image as layered packages.</p></item>
+ <item><p><link type="seealso" href="https://github.com/trigg/Discover">Discover Overlay</link> for Discord pre-installed and automatically launches in both Game mode and on the Desktop if Discord is installed. <link type="seealso" href="https://trigg.github.io/Discover/bazzite">View the official documentation here</link>.</p></item>
+ <item><p>Uses ZRAM(4GB) with the ZSTD compression algorithm by default with the option to switch back to a 1GB swap file and set a custom size for it if desired.</p></item>
+ <item><p>Kyber I/O scheduler to prevent I/O starvation when installing games or during background <code>duperemove</code> and <code>rmlint</code> processes.</p></item>
+ <item><p>Applies SteamOS's kernel parameters.</p></item>
+ <item><p>Color calibrated display profiles for matte and reflective Steam Deck screens included.</p></item>
+ <item><p>Default-disabled power-user features, including:
+ Service for low-risk undervolting of the Steam Deck via <link type="seealso" href="https://github.com/FlyGoat/RyzenAdj">RyzenAdj</link> and <link type="seealso" href="https://gitlab.com/leogx9r/ryzen_smu">Ryzen SMU</link>, see <code>ryzenadj.service</code> and <code>/etc/default/ryzenadj</code>.</p></item>
+ <item><p>Service for limiting the max charge level of the battery, see <code>batterylimit.service</code> and <code>/etc/default/batterylimit</code>. (Works even when the device is off)</p></item>
+ <item><p>Built in support for display overclocking. For example, add <code>GAMESCOPE_OVERRIDE_REFRESH_RATE=40,70</code> to <code>/etc/environment</code>.</p></item>
+ <item><p>Ability to use X11 on the desktop if desired by editing <code>/etc/default/desktop-wayland</code>.</p></item>
+ <item><p>32GB RAM mod your Steam Deck? Enjoy double the maximum VRAM amount, automatically applied. (Can you share your soldering skills?)</p></item>
+ </list>
+
+ <item><p>Steam Deck hardware-specific services can be disabled by running <code>ujust disable-bios-updates</code> and <code>ujust disable-firmware-updates</code> in the terminal. These are automatically disabled on non-Deck hardware, and on Decks with DeckHD displays or 32GB RAM mods.</p></item>
+ <item><p>More information can be found <link type="seealso" href="https://universal-blue.discourse.group/docs?topic=37">here</link> on the Bazzite Steam Deck images.</p></item>
+
+
+ <p>[!WARNING]
+ <em style="strong">Due to an upstream bug, Bazzite cannot be used on Steam Decks with 64GB eMMC storage at this time. Upgrading the storage resolves the issue.</em></p>
+ <p>[!IMPORTANT]
+ <em style="strong">ISOs can be downloaded from our <link type="seealso" href="https://github.com/ublue-os/bazzite/releases">releases page</link>, and a helpful install guide can be found <link type="seealso" href="https://universal-blue.discourse.group/docs?topic=30">here</link>.</em></p>
+
+ <p>Rebase from an existing upstream Fedora Atomic to this image:</p>
+ <p><code>bash
+ rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/bazzite-deck:stable</code></p>
+</section>
+
+<section>
+ <subtitle>Alternative Handhelds</subtitle>
+ <p>If you're using this image on a handheld other than the Steam Deck, you can get TDP control via the SimpleDeckyTDP Decky Loader Plugin.
+ - First install Decky Loader with: <code>ujust setup-decky</code>
+ - Then install SimpleDeckyTDP with: <code>ujust setup-decky simpledeckytdp</code></p>
+ <p>If you're using a handheld supported by <link type="seealso" href="https://github.com/hhd-dev/hhd">hhd</link> (Such as the Lenovo Legion Go and the ASUS Ally), you can also get the plugin to integrate an option menu for it into game mode with: <code>ujust setup-decky hhd-decky</code></p>
+ <p><em style="strong">Be sure to also read the <link type="seealso" href="https://github.com/hhd-dev/hhd#after-install">hhd documentation</link>, some handhelds require specific setting changes/tweaks to function properly.</em></p>
+ <p>We also ship <code>ujust</code> commands to install various <link type="seealso" href="https://docs.deckthemes.com/CSSLoader/Install/#linux-or-steam-deck">CSS Loader</link> themes that can't be found on the CSS Loader store. These will be automatically updated with Bazzite if installed.
+ ```bash</p>
+</section>
+
+<section>
+ <title>Install ROG Ally Theme for CSS Loader (https://github.com/semakusut/SBP-ROG-Ally)</title>
+ <p>ujust install-rog-ally-theme</p>
+</section>
+
+<section>
+ <title>Install Lenovo Legion Go for CSS Loader (https://github.com/frazse/SBP-Legion-Go-Theme)</title>
+ <p>ujust install-legion-go-theme</p>
+</section>
+
+<section>
+ <title>Install PS5-to-Xbox glyph theme for hhd &amp; CSS Loader (https://github.com/frazse/PS5-to-Xbox-glyphs)</title>
+ <p>ujust install-hhd-xbox-glyph-theme
+ ```</p>
+</section>
+
+<section>
+ <subtitle>GNOME</subtitle>
+ <p>Builds with the GNOME desktop environment are available in both desktop and deck flavors. These builds come with the following additional features:</p>
+ <list>
+ <item><p><link type="seealso" href="https://gitlab.gnome.org/GNOME/mutter/-/merge_requests/1154">Variable refresh rate support and fractional scaling enabled under Wayland</link>.</p></item>
+ <item><p>Custom menu in the top bar for returning to game mode, launching Steam, and opening a number of useful utilities.</p></item>
+ <item><p><link type="seealso" href="https://extensions.gnome.org/extension/1319/gsconnect/">GSConnect</link> preinstalled and ready to use.</p></item>
+ <item><p><link type="seealso" href="https://github.com/jeffshee/gnome-ext-hanabi">Hanabi extension</link> included to offer similar features to Wallpaper Engine in KDE.</p></item>
+ <item><p>Numerous optional extensions pre-installed, including <link type="seealso" href="https://www.youtube.com/watch?v=nbCg9_YgKgM">important user experience fixes</link>.</p></item>
+ <item><p>Automatic updates for the <link type="seealso" href="https://github.com/rafaelmardojai/firefox-gnome-theme">Firefox GNOME theme</link> and <link type="seealso" href="https://github.com/rafaelmardojai/thunderbird-gnome-theme">Thunderbird GNOME theme</link>. (If installed)</p></item>
+ </list>
+
+ <p>[!IMPORTANT]
+ <em style="strong">ISOs can be downloaded from our <link type="seealso" href="https://github.com/ublue-os/bazzite/releases">releases page</link>, and a helpful install guide can be found <link type="seealso" href="https://universal-blue.discourse.group/docs?topic=30">here</link>.</em></p>
+
+ <p>Rebase from an existing upstream Fedora Atomic to this image:</p>
+ <p><code>bash
+ rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/bazzite-gnome:stable</code></p>
+ <p>To rebase an existing ostree system to the <em style="strong">desktop with Nvidia drivers</em> release:</p>
+ <p><code>bash
+ rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/bazzite-gnome-nvidia:stable</code></p>
+
+ <p>[!WARNING]
+ <em style="strong">Due to an upstream bug, Bazzite cannot be used on Steam Decks with 64GB eMMC storage at this time.</em></p>
+
+ <p>To rebase an existing ostree system to the <em style="strong">Steam Deck/HTPC</em> release: </p>
+ <p><code>bash
+ rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/bazzite-deck-gnome:stable</code></p>
+ <p><em style="strong">For users with Secure Boot enabled:</em> Follow our <link xref="#secure-boot">secure boot documentation</link> prior to rebasing.</p>
+</section>
+
+<section>
+ <subtitle>Features from Upstream</subtitle>
+</section>
+
+<section>
+ <subtitle>Universal Blue</subtitle>
+ <list>
+ <item><p>Proprietary Nvidia drivers pre-installed. (Only for Nvidia images)</p></item>
+ <item><p>Flathub is enabled by default.</p></item>
+ <item><p><link type="seealso" href="https://github.com/casey/just"><code>ujust</code></link> commands for convenience.</p></item>
+ <item><p>Multi-media codecs out of the box.</p></item>
+ <item><p>Rollback Bazzite from any build within the last 90 days.</p></item>
+ </list>
+</section>
+
+<section>
+ <subtitle>Features from Fedora Linux (Kinoite &amp; Silverblue)</subtitle>
+ <list>
+ <item><p>A rock solid and stable base.</p></item>
+ <item><p>System packages stay relatively up to date.</p></item>
+ <item><p>Can layer Fedora packages to the image without losing them between updates.</p></item>
+ <item><p>Security focused with <link type="seealso" href="https://github.com/SELinuxProject/selinux">SELinux</link> preinstalled and configured out of the box.</p></item>
+ <item><p>The ability to rebase to different Fedora Atomic images, if desired, without losing user data.</p></item>
+ <item><p>Printing support thanks to <link type="seealso" href="https://www.cups.org/">CUPS</link> being preinstalled.</p></item>
+ </list>
+</section>
+
+<section>
+ <title>Why</title>
+ <p>Bazzite started as a project to resolve some of the issues that plague SteamOS, mainly out of date packages (despite an Arch base) and the lack of a functional package manager.</p>
+ <p>Despite this project also being image-based, you are able to install any Fedora package straight from the command line. These packages will persist across updates (So go ahead and install that obscure VPN software you spent an hour trying to get working in SteamOS). Additionally, Bazzite is updated multiple times a week with packages from upstream Fedora, giving you the best possible performance and latest features - all on a stable base.</p>
+ <p>Bazzite ships with the latest Linux kernel and SELinux enabled by default with full support for secure boot (Run <code>ujust enroll-secure-boot-key</code> and enter the password <code>ublue-os</code> if prompted to enroll our key) and disk encryption, making this a sensible solution for general computing. (Yes, you can print from Bazzite)</p>
+ <p>Read the <link type="seealso" href="https://universal-blue.discourse.group/docs?topic=33">FAQ</link> for details on what makes Bazzite stand out from other Linux operating systems.</p>
+</section>
+
+<section>
+ <title>Showcase</title>
+ <p><media type="image" src="/repo_content/desktop1.png?raw=true" mime="image/png" />
+ <media type="image" src="/repo_content/desktop2.png?raw=true" mime="image/png" />
+ <media type="image" src="/repo_content/gamemode.png?raw=true" mime="image/png" />
+ <media type="image" src="/repo_content/waydroid.png?raw=true" mime="image/png" />
+ <media type="image" src="/repo_content/distrobox.png?raw=true" mime="image/png" />
+ <media type="image" src="/repo_content/gnome1.png?raw=true" mime="image/png" />
+ <media type="image" src="/repo_content/gnome2.png?raw=true" mime="image/png" /></p>
+</section>
+
+<section>
+ <title>Documentation &amp; Newsletters</title>
+ <list>
+ <item><p><link type="seealso" href="https://universal-blue.discourse.group/docs?topic=35">Installing and Managing Applications</link></p></item>
+ <item><p><link type="seealso" href="https://universal-blue.discourse.group/docs?topic=36">Updates, Rollbacks, and Rebasing</link></p></item>
+ <item><p><link type="seealso" href="https://universal-blue.discourse.group/docs?topic=31">Gaming Guide</link></p></item>
+ <item><p><link type="seealso" href="https://universal-blue.discourse.group/docs?topic=129">Dual Booting Guide</link></p></item>
+ </list>
+ <p>View <link type="seealso" href="http://docs.bazzite.gg/">additional documentation</link> surrounding the project.</p>
+ <p>Check out our <link type="seealso" href="https://universal-blue.discourse.group/tag/bazzite-buzz">newsletters</link> that get published on a regular basis for updates on the project.</p>
+</section>
+
+<section>
+ <title>Custom Packages</title>
+ <p>Ported SteamOS and ChimeraOS packages, among others used by Bazzite, are built on Copr in <link type="seealso" href="https://copr.fedorainfracloud.org/coprs/kylegospo/bazzite/">bazzite</link> and <link type="seealso" href="https://copr.fedorainfracloud.org/coprs/kylegospo/bazzite-multilib/">bazzite-multilib</link>.</p>
+ <p>| Package                                                                                             | Status                                                                                                                                                      |
+ | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+ | bluez                                                                                               | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/bazzite-multilib/package/bluez/status_image/last_build.png?" mime="image/png" />                              |
+ | <link type="seealso" href="https://github.com/trigg/Discover">discover-overlay</link>                                               | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/bazzite/package/discover-overlay/status_image/last_build.png?" mime="image/png" />                            |
+ | ds-inhibit                                                                                          | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/bazzite/package/ds-inhibit/status_image/last_build.png?" mime="image/png" />                                  |
+ | duperemove                                                                                          | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/bazzite/package/duperemove/status_image/last_build.png?" mime="image/png" />                                  |
+ | <link type="seealso" href="https://github.com/Supreeeme/extest">extest</link>                                                       | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/bazzite-multilib/package/extest/status_image/last_build.png?" mime="image/png" />                             |
+ | gamescope                                                                                           | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/bazzite-multilib/package/gamescope/status_image/last_build.png?" mime="image/png" />                          |
+ | <link type="seealso" href="https://github.com/ChimeraOS/gamescope-session">gamescope-session-plus</link>                            | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/bazzite/package/gamescope-session-plus/status_image/last_build.png?" mime="image/png" />                      |
+ | <link type="seealso" href="https://github.com/ChimeraOS/gamescope-session-steam">gamescope-session-steam</link>                     | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/bazzite/package/gamescope-session-steam/status_image/last_build.png?" mime="image/png" />                     |
+ | gamescope-shaders                                                                                   | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/bazzite/package/gamescope-shaders/status_image/last_build.png?" mime="image/png" />                           |
+ | galileo-mura                                                                                        | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/bazzite/package/galileo-mura/status_image/last_build.png?" mime="image/png" />                                |
+ | <link type="seealso" href="https://github.com/maxwellainatchi/gnome-randr-rust">gnome-randr-rust</link>                             | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/bazzite/package/gnome-randr-rust/status_image/last_build.png?" mime="image/png" />                            |
+ | gnome-shell                                                                                         | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/bazzite/package/gnome-shell/status_image/last_build.png?" mime="image/png" />                                 |
+ | gnome-shell-extension-bazzite-menu                                                                  | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/bazzite/package/gnome-shell-extension-bazzite-menu/status_image/last_build.png?" mime="image/png" />          |
+ | <link type="seealso" href="https://extensions.gnome.org/extension/1326/block-caribou/">gnome-shell-extension-caribou-blocker</link> | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/bazzite/package/gnome-shell-extension-caribou-blocker/status_image/last_build.png?" mime="image/png" />       |
+ | <link type="seealso" href="https://github.com/hermes83/compiz-windows-effect">gnome-shell-extension-compiz-windows-effect</link>    | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/bazzite/package/gnome-shell-extension-compiz-windows-effect/status_image/last_build.png?" mime="image/png" /> |
+ | <link type="seealso" href="https://github.com/jeffshee/gnome-ext-hanabi">gnome-shell-extension-hanabi</link>                        | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/bazzite/package/gnome-shell-extension-hanabi/status_image/last_build.png?" mime="image/png" />                |
+ | <link type="seealso" href="https://github.com/jdoda/hotedge">gnome-shell-extension-hotedge</link>                                   | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/bazzite/package/gnome-shell-extension-hotedge/status_image/last_build.png?" mime="image/png" />               |
+ | <link type="seealso" href="https://github.com/foresto/joystickwake">joystickwake</link>                                             | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/bazzite/package/joystickwake/status_image/last_build.png?" mime="image/png" />                                |
+ | jupiter-fan-control                                                                                 | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/bazzite/package/jupiter-fan-control/status_image/last_build.png?" mime="image/png" />                         |
+ | jupiter-hw-support-<link type="seealso" href="https://gitlab.com/popsulfr/steamos-btrfs">btrfs</link>                               | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/bazzite/package/jupiter-hw-support-btrfs/status_image/last_build.png?" mime="image/png" />                    |
+ | kf5-kio                                                                                             | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/bazzite/package/kf5-kio/status_image/last_build.png?" mime="image/png" />                                     |
+ | <link type="seealso" href="https://github.com/flightlessmango/MangoHud">mangohud</link>                                             | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/bazzite-multilib/package/mangohud/status_image/last_build.png?" mime="image/png" />                           |
+ | mesa                                                                                                | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/bazzite-multilib/package/mesa/status_image/last_build.png?" mime="image/png" />                               |
+ | pipewire                                                                                            | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/bazzite-multilib/package/pipewire/status_image/last_build.png?" mime="image/png" />                           |
+ | powerbuttond                                                                                        | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/bazzite/package/powerbuttond/status_image/last_build.png?" mime="image/png" />                                |
+ | <link type="seealso" href="https://github.com/apmorton/pyhidapi">python3-hid</link>                                                 | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/bazzite/package/python3-hid/status_image/last_build.png?" mime="image/png" />                                 |
+ | rmlint                                                                                              | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/bazzite/package/rmlint/status_image/last_build.png?" mime="image/png" />                                      |
+ | <link type="seealso" href="https://github.com/FlyGoat/RyzenAdj">ryzenadj</link>                                                     | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/bazzite/package/ryzenadj/status_image/last_build.png?" mime="image/png" />                                    |
+ | <link type="seealso" href="https://github.com/kmicki/SteamDeckGyroDSU">sdgyrodsu</link>                                             | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/bazzite/package/sdgyrodsu/status_image/last_build.png?" mime="image/png" />                                   |
+ | steamdeck-dsp                                                                                       | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/bazzite/package/steamdeck-dsp/status_image/last_build.png?" mime="image/png" />                               |
+ | steamdeck-gnome-presets                                                                             | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/bazzite/package/steamdeck-gnome-presets/status_image/last_build.png?" mime="image/png" />                     |
+ | steamdeck-kde-presets                                                                               | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/bazzite/package/steamdeck-kde-presets/status_image/last_build.png?" mime="image/png" />                       |
+ | steamdeck-kde-presets-desktop                                                                       | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/bazzite/package/steamdeck-kde-presets-desktop/status_image/last_build.png?" mime="image/png" />               |
+ | steam_notif_daemon                                                                                  | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/bazzite/package/steam_notif_daemon/status_image/last_build.png?" mime="image/png" />                          |
+ | udisks2                                                                                             | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/bazzite/package/udisks2/status_image/last_build.png?" mime="image/png" />                                     |
+ | upower                                                                                              | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/bazzite/package/upower/status_image/last_build.png?" mime="image/png" />                                      |
+ | vpower                                                                                              | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/bazzite/package/vpower/status_image/last_build.png?" mime="image/png" />                                      |
+ | wireplumber                                                                                         | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/bazzite/package/wireplumber/status_image/last_build.png?" mime="image/png" />                                 |
+ | xorg-x11-server-Xwayland                                                                            | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/bazzite-multilib/package/xorg-x11-server-Xwayland/status_image/last_build.png?" mime="image/png" />           |
+ | <link type="seealso" href="https://github.com/dev-0x7C6/xwiimote-ng">xwiimote-ng</link>                                             | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/bazzite/package/xwiimote-ng/status_image/last_build.png?" mime="image/png" />                                 |</p>
+ <p>Additionally, the following packages are used from other Copr repos:</p>
+ <p>| Package                                                                                                       | Status                                                                                                                                                          |
+ | ------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+ | <link type="seealso" href="https://copr.fedorainfracloud.org/coprs/ublue-os/akmods/">gcadapter_oc-kmod</link>                                 | <media type="image" src="https://copr.fedorainfracloud.org/coprs/ublue-os/akmods/package/gcadapter_oc-kmod/status_image/last_build.png?" mime="image/png" />                                 |
+ | <link type="seealso" href="https://copr.fedorainfracloud.org/coprs/kylegospo/gnome-vrr/">gnome-vrr</link>                                     | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/gnome-vrr/package/mutter/status_image/last_build.png?" mime="image/png" />                                        |
+ | <link type="seealso" href="https://github.com/hhd-dev/hhd">hhd</link>                                                                         | <media type="image" src="https://copr.fedorainfracloud.org/coprs/hhd-dev/hhd/package/hhd/status_image/last_build.png?" mime="image/png" />                                                   |
+ | <link type="seealso" href="https://copr.fedorainfracloud.org/coprs/kylegospo/hl2linux-selinux/">hl2linux-selinux</link>                       | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/hl2linux-selinux/package/hl2linux-selinux/status_image/last_build.png?" mime="image/png" />                       |
+ | <link type="seealso" href="https://copr.fedorainfracloud.org/coprs/kylegospo/joycond/">joycond</link>                                         | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/joycond/package/joycond/status_image/last_build.png?" mime="image/png" />                                         |
+ | <link type="seealso" href="https://copr.fedorainfracloud.org/coprs/sentry/kernel-fsync/">kernel-fsync</link>                                  | <media type="image" src="https://copr.fedorainfracloud.org/coprs/sentry/kernel-fsync/package/kernel/status_image/last_build.png?" mime="image/png" />                                        |
+ | <link type="seealso" href="https://copr.fedorainfracloud.org/coprs/kylegospo/LatencyFleX/">latencyflex-vulkan-layer</link>                    | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/LatencyFleX/package/latencyflex-vulkan-layer/status_image/last_build.png?" mime="image/png" />                    |
+ | <link type="seealso" href="https://copr.fedorainfracloud.org/coprs/che/nerd-fonts/">nerd-fonts</link>                                         | <media type="image" src="https://copr.fedorainfracloud.org/coprs/che/nerd-fonts/package/nerd-fonts/status_image/last_build.png?" mime="image/png" />                                         |
+ | <link type="seealso" href="https://copr.fedorainfracloud.org/coprs/ycollet/audinux/">noise-suppression-for-voice</link>                       | <media type="image" src="https://copr.fedorainfracloud.org/coprs/ycollet/audinux/package/noise-suppression-for-voice/status_image/last_build.png?" mime="image/png" />                       |
+ | <link type="seealso" href="https://copr.fedorainfracloud.org/coprs/kylegospo/obs-vkcapture/">obs-vkcapture</link>                             | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/obs-vkcapture/package/obs-vkcapture/status_image/last_build.png?" mime="image/png" />                             |
+ | <link type="seealso" href="https://gitlab.gnome.org/chergert/ptyxis">ptyxis</link>                                                            | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/prompt/package/ptyxis/status_image/last_build.png?" mime="image/png" />                                           |
+ | <link type="seealso" href="https://copr.fedorainfracloud.org/coprs/kylegospo/rom-properties/">rom-properties</link>                           | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/rom-properties/package/rom-properties/status_image/last_build.png?" mime="image/png" />                           |
+ | <link type="seealso" href="https://copr.fedorainfracloud.org/coprs/ublue-os/akmods/">steamdeck-kmod</link>                                    | <media type="image" src="https://copr.fedorainfracloud.org/coprs/ublue-os/akmods/package/jupiter-kmod/status_image/last_build.png?" mime="image/png" />                                      |
+ | <link type="seealso" href="https://copr.fedorainfracloud.org/coprs/kylegospo/system76-scheduler/">system76-scheduler</link>                   | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/system76-scheduler/package/system76-scheduler/status_image/last_build.png?" mime="image/png" />                   |
+ | <link type="seealso" href="https://github.com/redhat-performance/tuned">tuned</link>-ppd                                                      | <media type="image" src="https://copr.fedorainfracloud.org/coprs/ublue-os/staging/package/tuned/status_image/last_build.png?" mime="image/png" />                                            |
+ | <link type="seealso" href="https://github.com/ublue-os/ublue-update">ublue-update</link>                                                      | <media type="image" src="https://copr.fedorainfracloud.org/coprs/ublue-os/staging/package/ublue-update/status_image/last_build.png?" mime="image/png" />                                     |
+ | <link type="seealso" href="https://copr.fedorainfracloud.org/coprs/kylegospo/VTFLib/">VTFLib</link>                                           | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/VTFLib/package/VTFLib/status_image/last_build.png?" mime="image/png" />                                           |
+ | <link type="seealso" href="https://copr.fedorainfracloud.org/coprs/kylegospo/wallpaper-engine-kde-plugin/">wallpaper-engine-kde-plugin</link> | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/wallpaper-engine-kde-plugin/package/wallpaper-engine-kde-plugin/status_image/last_build.png?" mime="image/png" /> |
+ | <link type="seealso" href="https://copr.fedorainfracloud.org/coprs/kylegospo/webapp-manager/">webapp-manager</link>                           | <media type="image" src="https://copr.fedorainfracloud.org/coprs/kylegospo/webapp-manager/package/webapp-manager/status_image/last_build.png?" mime="image/png" />                           |</p>
+</section>
+
+<section>
+ <title>Verification</title>
+ <p>These images are signed with sigstore's <link type="seealso" href="https://docs.sigstore.dev/cosign/overview/">cosign</link>. You can verify the signature by downloading the <code>cosign.pub</code> key from this repo and running the following command:</p>
+ <p><code>bash
+ cosign verify --key cosign.pub ghcr.io/ublue-os/bazzite</code></p>
+</section>
+
+<section>
+ <title>Secure Boot</title>
+
+ <p>[!WARNING]
+ <em style="strong">Steam Deck Users: The Steam Deck does not come with secure boot enabled and does not ship with any keys enrolled by default. Do not enable this unless you absolutely know what you're doing.</em></p>
+
+ <p>Secure boot is supported with our custom key. The pub key can be found in the root of this repository <link type="seealso" href="https://github.com/ublue-os/bazzite/blob/main/secure_boot.der">here</link>.
+ If you'd like to enroll this key prior to installation or rebase, download the key and run the following:</p>
+ <p><code>bash
+ sudo mokutil --timeout -1
+ sudo mokutil --import secure_boot.der</code></p>
+ <p>For users already on a Universal Blue image, you may instead run <code>ujust enroll-secure-boot-key</code>.</p>
+ <p>If asked for a password, use <code>ublue-os</code>.</p>
+</section>
+
+<section>
+ <subtitle>Contributor Metrics</subtitle>
+ <p><media type="image" src="https://repobeats.axiom.co/api/embed/86b500d79c613015ad16f56df76c8e13f3fd98ae.svg" mime="image/png" /></p>
+</section>
+
+<section>
+ <subtitle>Star History</subtitle>
+ <p><link type="seealso" href="https://star-history.com/#ublue-os/bazzite&Date">
+  
+    
+    
+     <media type="image" src="https://api.star-history.com/svg?repos=ublue-os/bazzite&type=Date" mime="image/png" />
+  
+ </link></p>
+</section>
+
+<section>
+ <title>Special Thanks</title>
+ <p>Bazzite is a community effort and wouldn't exist without everyone's support. Below are some of the people who've helped us along the way:</p>
+ <list>
+ <item><p><link type="seealso" href="https://github.com/reisvg">rei.svg</link> - For creating our logo and overall branding.</p></item>
+ <item><p><link type="seealso" href="https://github.com/SuperRiderTH">SuperRiderTH</link> - For creating our Steam game mode startup video.</p></item>
+ <item><p><link type="seealso" href="https://gitlab.com/evlaV">evlaV</link> - For making Valve's code available and for being <link type="seealso" href="https://xkcd.com/2347/">this person</link>.</p></item>
+ <item><p><link type="seealso" href="https://chimeraos.org/">ChimeraOS</link> - For gamescope-session and for valuable support along the way.</p></item>
+ <item><p><link type="seealso" href="https://github.com/Jovian-Experiments">Jovian-NixOS</link> - For supporting us with technical issues and for creating a similar project. Seriously, go check it out. It's our Nix-based cousin.</p></item>
+ <item><p><link type="seealso" href="https://copr.fedorainfracloud.org/coprs/sentry/">sentry</link> - For assistance with needed kernel patches and for creating the <link type="seealso" href="https://copr.fedorainfracloud.org/coprs/sentry/kernel-fsync/">kernel-fsync repo</link> we now use.</p></item>
+ <item><p><link type="seealso" href="https://github.com/nicknamenamenick">nicknamenamenick</link> - For being the MVP nearly single-handedly upkeeping our documentation and support literature, and countless cases of helping users.</p></item>
+ <item><p><link type="seealso" href="https://deckbrew.xyz">Steam Deck Homebrew</link> - For choosing to support distributions other than SteamOS despite the extra work, and a special thanks to <link type="seealso" href="https://github.com/PartyWumpus">PartyWumpus</link> for getting Decky Loader working with SELinux for us.</p></item>
+ <item><p><link type="seealso" href="https://github.com/cyrv6737">cyrv6737</link> - For the initial inspiration and the base that became bazzite-arch.</p></item>
+ </list>
+</section>
+
+<section>
+ <title>Build Your Own</title>
+ <p>Bazzite is built entirely in GitHub and creating your own custom version of it is as easy as forking this repository, adding a private signing key, and enabling GitHub actions.</p>
+ <p><link type="seealso" href="https://docs.github.com/en/actions/security-guides/encrypted-secrets">Familiarize yourself</link> on keeping secrets in github. You'll need to <link type="seealso" href="https://docs.sigstore.dev/cosign/overview/">generate a new keypair</link> with cosign. The public key can be in your public repo (Your users need it to check the signatures), and you can paste the private key in <code>Settings -&gt; Secrets -&gt; Actions</code> with the name <code>SIGNING_SECRET</code>.</p>
+ <p>We also ship a config for the popular <link type="seealso" href="https://github.com/apps/pull">pull app</link> if you'd like to keep your fork in sync with upstream. Enable this app on your repo to keep track of Bazzite changes while also making your own modifications.</p>
+</section>
+
+<section>
+ <title>Join The Community</title>
+ <p>You can find us on the <link type="seealso" href="https://discord.gg/f8MUghG5PB">Universal Blue Discord</link> and view the <link type="seealso" href="https://www.answeroverflow.com/c/1072614816579063828/1143023993041993769">archive</link> of support threads without an account.</p>
+ <p>Discuss and create user guides over at the <link type="seealso" href="https://universal-blue.discourse.group/c/bazzite/5">Universal Blue Discourse Forums</link>.</p>
+ <p>Follow Universal Blue on <link type="seealso" href="https://fosstodon.org/@UniversalBlue">Mastodon</link>.</p>
+</section>
+
+
+</page>
