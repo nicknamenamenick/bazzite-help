@@ -10,10 +10,16 @@ Open this project using the given devcontainer specification
 
 It is recommended to build this in a Distrobox or Toolbx container.
 
-Dependencies:
+#### Dependencies:
 - `make` (for building)
 - `yelp-tools`
 - `yelp`
+
+Download this repo and extract the archive to a preferrred location.
+
+```bash
+cd /path/to/bazzite-help-main
+```
 
 ```bash
 make
