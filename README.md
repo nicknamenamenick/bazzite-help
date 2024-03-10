@@ -1,8 +1,6 @@
 # bazzite-help
 Example linux yelp-based help documentation, using `yelp-tools` for freedesktop.org compliant linux help.
 
-(Yes this is a mess right now.)
-
 ## Instructions
 
 ### Dev Container
