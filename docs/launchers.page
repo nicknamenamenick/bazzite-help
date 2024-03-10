@@ -1,0 +1,73 @@
+ <page xmlns="http://projectmallard.org/1.0/"
+      type="guide"
+      id="launchers">
+<info>
+  <link type="guide" xref="gaming"/>
+</info>
+<title>2. Game Launchers</title>
+
+<section>
+ <title>Steam</title>
+ <p>Steam can run Windows games on Linux.  It utilizes a wide range of projects like WINE, DXVK, VKD3D, and a bunch of patches all packed into a piece of software built-in to Steam called <link type="seealso" href="https://github.comValveSoftware/Proton">Proton</link>.</p>
+</section>
+
+<section>
+ <subtitle>Enabling Proton for All Steam Games</subtitle>
+ <p><em style="strong">Note</em>: Skip this section if you're using a <link type="seealso" href="https://universal-blue.discourse.group/docs?topic=37"><em>Steam Deck / HTPC  / Handheld-PC</em></link> image.</p>
+ <list>
+ <item><p>Currently Steam only allows whitelisted games to run by default.</p></item>
+ <item><p>You can change this by going into the Steam <em style="strong">Settings</em> &gt; <em style="strong">Compatibility</em> &gt; Check <em style="strong">Enable Steam Play for all other titles</em></p></item>
+ </list>
+ <media type="image" src="launchers_media_steam_settings.png" mime="image/png"/>
+</section>
+
+<section>
+ <title>Forcing a specific Proton / Steam Play Tool Version</title>
+ <list>
+ <item><p>Some games run better with a specific version of Proton or forcing the Linux runtime
+ Run that specific version by going into the game's <em style="strong">Properties</em> &gt; <em style="strong">Compatibility</em> &gt; <em style="strong">Force the use of a specific Steam Play compatibility tool</em></p></item>
+ </list>
+
+
+ <p><media type="image" src="launchers_media_compat.png" mime="image/png" /> </p>
+ <p><em style="strong">Note:</em> If you are using the <link type="seealso" href="https://universal-blue.discourse.group/docs?topic=37"><em>Steam Deck/HTPC/Handheld-PC</em> images</link> and want to disable Steam Deck specific features, then <em style="strong">enter this launch option for the game in the properties menu</em>:
+ <code>
+ SteamDeck=0 %command%</code></p>
+</section>
+
+<section>
+ <title>Non-Steam Games</title>
+ <list>
+ <item><p><em style="strong">It is recommended to use <link type="seealso" href="https://lutris.net/games?q=&amp;ordering=-popularity&amp;paginate_by=100">Lutris</link> for <em>most</em> non-steam games</em></p></item>
+ <item><p><link type="seealso" href="https://heroicgameslauncher.com">Heroic</link> for Epic, GOG, and Amazon Games Launcher</p></item>
+ <item><p><link type="seealso" href="https://usebottles.com/">Bottles</link> is also a good alternative if you wish to use that</p></item>
+ <item><p>Other games and launchers are also available in the software center (<em>Discover, GNOME Software</em>) like itch.io</p></item>
+ </list>
+</section>
+
+<section>
+ <subtitle>Lutris</subtitle>
+ <p><media type="image" src="launchers_media_lutris.png" mime="image/png" /></p>
+ <p>Lutris is game management software that doubles as a WINE front-end for Windows games.</p>
+ <p><media type="image" src="upload://1WR6qGSLGJ0oRkdwvCFwhCZllq0.png" mime="image/png" /></p>
+ <p>Several games and launchers can be installed by searching for the title and using one of the installer scripts for it.</p>
+ <p>It is <em style="strong">recommend to use a Lutris Wine runner or GE-WINE</em>.  Do not attempt to run games with the generic system WINE.</p>
+
+  <p>However if your game is not listed or doesn't work with the provided script, then manually add the executable.</p>
+</section>
+
+<section>
+ <title>Compatibility Layers</title>
+ <list>
+ <item><p>It is recommended to use <link type="seealso" href="https://davidotek.github.io/protonup-qt/">ProtonUp-Qt</link> or <link type="seealso" href="https://github.com/Vysp3r/protonplus">ProtonPlus</link> to update the latest <link type="seealso" href="https://github.com/GloriousEggroll/proton-ge-custom">GE-Proton</link>, <link type="seealso" href="https://github.com/luxtorpeda-dev/luxtorpeda">Luxtorpeda</link>, and other useful <link type="seealso" href="https://steamcommunity.com/games/221410/announcements/detail/1696055855739350561">SteamPlay tools</link>. </p></item>
+ <item><p>View the tested games with <link type="seealso" href="https://github.com/GloriousEggroll/proton-ge-custom/blob/master/README.md#tested-games">GE-Proton</link>.</p></item>
+ <item><p>View the compatible games with <link type="seealso" href="https://luxtorpeda-dev.github.io/">Luxtorpeda</link>.</p></item>
+ <item><p>Some games require <link type="seealso" href="https://github.com/Matoking/protontricks">Protontricks</link> (included) or <link type="seealso" href="https://github.com/Winetricks/winetricks">Winetricks</link> (for non-Steam games, included with Lutris) to function properly.</p></item>
+ <item><p>Always use <link type="seealso" href="https://github.com/GloriousEggroll/wine-ge-custom">WINE-GE</link>, a Lutris WINE build, <link type="seealso" href="https://docs.usebottles.com/components/runners">Caffe, Soda</link>, or <link type="seealso" href="https://github.com/Frogging-Family/wine-tkg-git">Wine-TKG</link> as the runner for <em style="strong">non-Steam games</em>.</p></item>
+ <item><p>Proton could work, but it may have inconsistent results and issues.
+ <link type="seealso" href="https://github.com/Open-Wine-Components">Open Wine Components</link> may change this as it matures and integrates with WINE front-ends over time.</p></item>
+ </list>
+</section>
+
+</page>
+

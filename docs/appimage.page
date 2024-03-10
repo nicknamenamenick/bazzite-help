@@ -1,0 +1,19 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="guide"
+      id="appimage">
+<info>
+  <link type="guide" xref="applications"/>
+</info>
+<title>4. AppImage</title>
+
+<section>
+ <title><link type="seealso" href="https://appimage.org/">AppImage</link></title>
+ <p><media type="image" src="upload://lehDJcnEbMe0rImBgX8cKvhysfh.png" mime="image/png" /></p>
+ <p>AppImage is a universal package format that attempts to bundle every dependency that an application needs into one portable file.</p>
+ <p>AppImages can be installed by downloading any file with a <code>.AppImage</code> extension and then giving it executable permissions in the file's properties so the application can run properly.</p>
+ <p>Typically, AppImages can be installed from a project's website, <link type="seealso" href="https://www.appimagehub.com/">AppImage Hub</link> or if you install <link type="seealso" href="https://flathub.org/apps/io.github.prateekmedia.appimagepool">AppImage Pool</link>.</p>
+ <p>Manage AppImages with the <link type="seealso" href="https://github.com/mijorus/gearlever">Gear Lever</link> application that is pre-installed.</p>
+ <p><em style="strong">NOTE</em>: AppImages may not be supported if rebasing to another Fedora Atomic image.</p>
+</section>
+
+</page>

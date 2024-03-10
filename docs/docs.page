@@ -1,0 +1,17 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="guide"
+      id="docs">
+<info>
+  <link type="guide" xref="index"/>
+</info>
+
+
+<title>09 - Additional Documentation</title>
+
+<section>
+
+    <p> Addtional documentation can be found online <link type="seealso" href="https://docs.bazzite.gg">here.</link></p>
+
+</section>
+
+</page>

@@ -1,0 +1,12 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="guide"
+      id="extensions">
+<info>
+  <link type="guide" xref="index"/>
+</info>
+<title>05 - Managing Extensions</title>
+
+<p>Bazzite uses the <link type="seealso" href="https://flathub.org/apps/com.mattjakeman.ExtensionManager">Extension Manager</link> to manage the desktop extensions. You can access it via the <link type="seealso" href="https://github.com/Aryan20/Logomenu">Logo Menu</link></p>
+<p><media type="image" src="extensions_media.png" mime="image/png" /></p>
+
+</page>

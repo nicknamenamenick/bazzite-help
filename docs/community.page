@@ -1,0 +1,15 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="guide"
+      id="community">
+<info>
+  <link type="guide" xref="index"/>
+</info>
+<title>10 - Join The Community</title>
+<section>
+ <p>You can find us on the <link type="seealso" href="https://discord.gg/f8MUghG5PB">Universal Blue Discord</link> and view the <link type="seealso" href="https://www.answeroverflow.com/c/1072614816579063828/1143023993041993769">archive</link> of support threads without an account.</p>
+ <p>Discuss and create user guides over at the <link type="seealso" href="https://universal-blue.discourse.group/c/bazzite/5">Universal Blue Discourse Forums</link>.</p>
+ <p>Follow Universal Blue on <link type="seealso" href="https://fosstodon.org/@UniversalBlue">Mastodon</link>.</p>
+</section>
+
+
+</page>

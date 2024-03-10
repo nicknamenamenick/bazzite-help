@@ -1,0 +1,40 @@
+ <page xmlns="http://projectmallard.org/1.0/"
+      type="guide"
+      id="workarounds">
+<info>
+  <link type="guide" xref="gaming"/>
+</info>
+<title>4. Workarounds</title>
+
+<section>
+ <title>Source 1 Game Issues (Team Fortress 2, Left 4 Dead 2, etc.)</title>
+</section>
+
+<section>
+ <subtitle>Games are not launching</subtitle>
+ <p>If a 32-bit Source 1 engine game is not opening due to <link type="seealso" href="https://github.com/ValveSoftware/csgo-osx-linux/issues/3229">tmalloc libraries issues</link>, then open a host terminal and enter:</p>
+ <p> <code> ujust patch-source1-tcmalloc </code> </p>
+   <p> Follow the directions that display on the terminal output. </p>
+</section>
+
+<section>
+ <subtitle>Audio and custom content issues</subtitle>
+ <p>Missing voice lines or custom content not loading in Source games?  <link type="seealso" href="https://github.com/ValveSoftware/steam-for-linux/issues/43">SELinux is blocking mp3 decoding and other middleware because it executes heap memory</link>.</p>
+ <p>Team Fortress 2 will eventually fix this issue in an upcoming update to the stable branch.  The current 64-bit and Vulkan beta branch have resolved this issue.</p>
+ <p><em style="strong">At your own risk</em></p>
+ <steps>
+ <item><p>Open a host terminal and <em style="strong">enter these 4 commands</em>:</p></item>
+ </steps>
+ <p><code>sudo su</code></p>
+ <p><code>command
+ cd /tmp</code></p>
+ <p><code>command
+ ausearch -c 'hl2_linux' --raw | audit2allow -M my-hl2linux</code></p>
+ <p><code>command
+ semodule -X 300 -i my-hl2linux.pp</code></p>
+ <steps>
+ <item><p>Reboot your device</p></item>
+ </steps>
+</section>
+
+</page>
