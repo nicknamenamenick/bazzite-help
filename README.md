@@ -3,10 +3,17 @@ Example linux yelp-based help documentation, using `yelp-tools` for freedesktop.
 
 ## Instructions
 
-## Dev Container
+### Dev Container
 Open this project using the given devcontainer specification
 
 ### Building
+
+It is recommended to build this in a Distrobox or Toolbx container.
+
+Dependencies:
+- `make` (for building)
+- `yelp-tools`
+- `yelp`
 
 ```bash
 make
