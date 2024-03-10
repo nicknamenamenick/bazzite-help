@@ -1,5 +1,5 @@
 <page xmlns="http://projectmallard.org/1.0/"
- type="guide" id="deckimages">
+ type="guide" id="handheld">
 
 <info>
     <link type="guide" xref="index#nav"/>
@@ -8,84 +8,8 @@
     <?http header="X-Generator: html2mallard" ?>
 </info>
 
-<title>Deckimages</title>
+<title>Handheld</title>
 
-
-<section>
- <title>Does the Steam Deck image receive BIOS updates like SteamOS?</title>
- <p><em style="strong">Yes</em>.  </p>
- <p>If a BIOS update is available then it will install when you update Bazzite normally.  It also supports controller firmware updates too.</p>
- <p>If desired, there is a  <em style="strong">command to disable BIOS updates</em> at your own risk: 
- <code>ujust disable-bios-updates</code></p>
-</section>
-
-<section>
- <title>Why is the stock 64GB Steam Deck not supported on Bazzite?</title>
- <p>It has <em style="strong">filesystem corruptions</em>.  </p>
- <p>You will have booting issues, freezes, and will not be able to update the image.  </p>
- <p><em style="strong">At your own risk</em>:
- Upgrade the storage to resolve this.</p>
- <p>This <link type="seealso" href="https://universal-blue.discourse.group/t/my-experience-using-bazzite-on-the-64gb-steam-deck/125/1">thread</link> covers a detailed explanation and first-hand experience of using Bazzite on the stock 64GB Steam Deck.</p>
-</section>
-
-<section>
- <title>Can I use the Steam Deck images on other devices?</title>
- <p><em style="strong">Yes</em>.  </p>
-</section>
-
-<section>
- <title>Requirements</title>
- <list>
- <item><p><link type="seealso" href="https://universal-blue.discourse.group/docs?topic=30">Bazzite's system requirements</link></p></item>
- <item><p><link type="seealso" href="https://store.steampowered.com/">Steam</link> account</p></item>
- <item><p>Compatible graphics card</p></item>
- <item><p>A <em style="strong">modern AMD GPU</em></p></item>
- <item><p>An <em style="strong">Intel ARC GPU</em></p></item>
- <item><p><em style="strong">Nvidia</em> GPUs are <em style="strong">not supported</em> at this time</p></item>
- </list>
-</section>
-
-<section>
- <title>Alternative Handhelds</title>
- <p><em style="strong">Note</em>: It is imperative to read documentation from each item for more information.</p>
- <p>If you're using this image on a handheld that is <em style="strong">not</em> the Steam Deck, then you can get TDP control via the <link type="seealso" href="https://github.com/aarron-lee/SimpleDeckyTDP">SimpleDeckyTDP</link> plugin.</p>
- <steps>
- <item><p>Open the terminal and install <link type="seealso" href="https://decky.xyz/">Decky Loader</link> with this <em style="strong">command</em>: 
- <code>ujust setup-decky</code></p></item>
- <item><p>Install SimpleDeckyTDP: 
- <code>ujust setup-decky simpledeckytdp</code></p></item>
- </steps>
-</section>
-
-<section>
- <subtitle><em style="strong">Specific Handheld Commands</em>:</subtitle>
- <p>Make sure to install <link type="seealso" href="https://docs.deckthemes.com/CSSLoader/Install/#linux-or-steam-deck">CSS Loader</link> from the Decky plugin store <em style="strong">after</em> installing Decky.</p>
- <p>If you're using a handheld supported by <link type="seealso" href="https://github.com/hhd-dev/hhd">hhd</link> (Such as the Lenovo Legion Go and the ASUS Ally), then you can also get the plugin to integrate an option menu for it into game mode <em style="strong">with</em>:</p>
- <p><code>ujust setup-decky hhd-decky</code></p>
- <p><em style="strong">Be sure to also read the <link type="seealso" href="https://github.com/hhd-dev/hhd#after-install">hhd documentation</link> because some handhelds require specific setting changes and tweaks to function properly.</em></p>
-</section>
-
-<section>
- <subtitle>Install <link type="seealso" href="https://github.com/semakusut/SBP-ROG-Ally">ROG Ally Theme for CSS Loader</link></subtitle>
- <p><code>ujust install-rog-ally-theme</code></p>
-</section>
-
-<section>
- <subtitle>Install <link type="seealso" href="https://github.com/frazse/SBP-Legion-Go-Theme">Lenovo Legion Go for CSS Loader</link></subtitle>
- <p><code>ujust install-legion-go-theme</code></p>
-</section>
-
-<section>
- <subtitle>Install <link type="seealso" href="https://github.com/frazse/PS5-to-Xbox-glyphs">PS5-to-Xbox glyph theme for hhd &amp; CSS Loader</link></subtitle>
- <p><code>ujust install-hhd-xbox-glyph-theme</code></p>
-</section>
-
-<section>
- <title>Can I run Game Mode if I have a Nvidia GPU</title>
- <p><em style="strong">No.</em></p>
- <p>Nvidia's proprietary drivers currently do not have support for either Game Mode.  AMD and Intel GPUs have mature open source graphic drivers that fully support most applications on the Linux desktop.</p>
- <p>This may change soon thanks to the work of those involved with the <link type="seealso" xref="https://www.collabora.com/news-and-blog/news-and-events/introducing-nvk">NVK</link> project as it matures over time.</p>
-</section>
 
 <section>
  <title>How do I use X11 in Desktop Mode?</title>
@@ -110,7 +34,7 @@
 </section>
 
 <section>
- <title>KDE</title>
+ <subtitle>KDE</subtitle>
  <p><code>[Desktop Entry]
  Name=Return to Gaming Mode
  Exec=qdbus org.kde.Shutdown /Shutdown org.kde.Shutdown.logout
@@ -121,7 +45,7 @@
 </section>
 
 <section>
- <title>GNOME:</title>
+ <subtitle>GNOME:</subtitle>
  <p><code>[Desktop Entry]
  Name=Return to Gaming Mode
  Exec=gnome-session-quit --logout --no-prompt
@@ -130,25 +54,6 @@
  Type=Application
  StartupNotify=false</code></p>
  <p>Save it and place it in the Desktop directory.</p>
-</section>
-
-<section>
- <title>Update and Changelog Inaccuracy</title>
-</section>
-
-<section>
- <title>Updates</title>
- <p>The update indicator is faked due to the limitations of Steam itself expecting the user to be on SteamOS for that progress bar to give any accurate information.  </p>
- <p>There is a set schedule for that to stop showing the progress indicator after a certain time.  If it's still updating, and you're still not sure if it applied, then run our <em>System Update</em> tool in Desktop Mode for an accurate update visual.</p>
-</section>
-
-<section>
- <title>Changelog</title>
- <p>The changelog is specifically for SteamOS.  Some of it may apply since we share a lot of the same packages, but regardless, it will always show SteamOS changelogs by Valve.</p>
- <p>Check out our <link type="seealso" href="https://universal-blue.discourse.group/tag/bazzite-buzz">newsletters</link> for major changes and features. If you want to see the patch notes in real time, check the newest <link type="seealso" href="https://github.com/ublue-os/bazzite/commits/main">commits</link> on Github.</p>
- <p>View a changelog to the next update in the terminal by entering: 
- <code>ujust changelogs</code></p>
- <p>View the <link type="seealso" href="https://universal-blue.discourse.group/docs?topic=36#steam-deck-and-htpc-images-bazzite-deck-and-bazzite-deck-gnome-etc-5">Updates, Rollbacks, &amp; Rebasing documentation</link> for more information.</p>
 </section>
 
 
