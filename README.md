@@ -27,12 +27,6 @@ make
 
 Output file will be `index.epub`
 
-### Cleaning
-
-```bash
-make clean
-```
-
 ### Reading Help File
 
 From the host:
@@ -48,3 +42,9 @@ yelp .
 ### References Directory
 
 These are translated from the [Discourse documentation](https://docs.bazzite.gg) using [html2mallard](https://pypi.org/project/html2mallard/).  Personally, I cherry pick from these reference files.
+
+### Cleaning
+
+```bash
+make clean
+```
