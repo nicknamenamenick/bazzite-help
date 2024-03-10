@@ -12,12 +12,10 @@
  <p>Use these <link type="seealso" href="https://www.winehq.org/">WINE</link> front-ends:</p>
  <list>
  <item><p><link type="seealso" href="https://store.steampowered.com/">Steam</link> (<em>pre-installed</em>) has a Windows compatibility layer built-in to easily run Windows games</p></item>
- <item><p>Read the <link type="seealso" href="https://universal-blue.discourse.group/docs?topic=31">Gaming Guide</link> for more information</p></item>
  <item><p><link type="seealso" href="https://lutris.net/">Lutris</link> (<em>pre-installed</em>) for non-Steam video games</p></item>
  <item><p><link type="seealso" href="https://flathub.org/apps/com.usebottles.bottles">Bottles</link> for general-purpose applications or as an alternative to Lutris</p></item>
  <item><p><link type="seealso" href="https://flathub.org/apps/com.heroicgameslauncher.hgl">Heroic</link> for Epic, GOG, and Amazon Games Launcher</p></item>
  <item><p><link type="seealso" href="https://flathub.org/apps/io.itch.itch">itch</link> for games on itch.io. </p></item>
- <item><p>Also comes pre-installed with a Windows compatibility layer</p></item>
  <item><p><link type="seealso" href="https://github.com/fastrizwaan/WineZGUI">WineZGUI</link> (<em>pre-installed</em>) for Windows applications that don’t require special considerations for their prefix</p></item>
  </list>
 </section>

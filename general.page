@@ -8,7 +8,9 @@
 
 <section>
  <title>What is Bazzite?</title>
- <p>Bazzite is a custom image of Fedora Atomic intended for gaming. </p>
+ <p>Bazzite is a custom image of Fedora Atomic from Universal Blue intended for gaming.</p>
+
+ <p>It targets desktop users who want a nearly maintenance-free Linux gaming experience.  Bazzite provide images for Desktops/Laptops, HTPCs, and Handhelds. </p>
 
 </section>
 
@@ -17,24 +19,6 @@
  <p>Edit the <code>/etc/hostname</code> file with a new hostname, save it,  and reboot. </p>
  <p><code>sudoedit /etc/hostname</code></p>
 
-</section>
-
- <section>
- <title>What are some of the unique applications that Bazzite uses?</title>
- <p>(in alphabetical order)
- - <link type="seealso" href="https://github.com/ublue-os/boxkit">Boxkit</link>
-   - Tool used for custom OCI Distrobox/Toolbox containers
-     - Anything from <link type="seealso" href="https://github.com/zelikos/davincibox">DaVinci Resolve</link> to <link type="seealso" href="https://github.com/ublue-os/obs-studio-portable">OBS Studio Portable</link> can be accessed with this.  These applications run in their own special container, so dependencies do not affect your host
- - <link type="seealso" href="https://github.com/trigg/Discover">Discover Overlay</link>
-   - It has a <link type="seealso" href="https://trigg.github.io/Discover/bazzite">special configuration</link> for Bazzite where it automatically starts when you are in Game Mode and Discord is running on Steam Deck/HTPC images
- - <link type="seealso" href="https://gitlab.gnome.org/chergert/prompt">Ptyxis</link>
-   - Terminal with first-class container support
- - <link type="seealso" href="https://github.com/casey/just"><code>ujust</code></link>
-   - Execute custom commands based on recipes
-     - See some example commands <link type="seealso" href="https://universal-blue.discourse.group/docs?topic=42">here</link>
- - <link type="seealso" href="https://github.com/ublue-os/yafti/">YAFTI (Bazzite Portal)</link>
-   - First-boot utility for installing additional software
-       - Currently looking for a <link type="seealso" href="https://universal-blue.discourse.group/docs?topic=38">contributor</link> who feels comfortable with Python to improve it</p>
 </section>
 
 <section>

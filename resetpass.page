@@ -18,16 +18,16 @@
 <p>Boot with <code>init=/bin/bash</code> on the kernel command line (e.g. edit GRUB prompt.)</p>
 <p><media type="image" src="upload://1gpqkxAiCQqofTEYWIL7XPONGKr.jpeg" mime="image/png" /></p>
 <p>Continue boot process with Ctrl+X</p>
-<p>Once you are in the GRUB command line:
-1. Temporarily mount SELinux
+<p>Once you are in the GRUB command line:</p>
+<p>1. Temporarily mount SELinux</p>
 <code>mount -t selinuxfs selinuxfs /sys/fs/selinux</code>
-2.  Load SELinux policy
+<p>2.  Load SELinux policy</p>
 <code>/sbin/load_policy</code>
-3. Enter your new password (i.e. passwd nick)
+<p>3. Enter your new password (i.e. passwd nick)</p>
 <code>passwd [INSERT USERNAME HERE]</code>
-4. Sync
+<p>4. Sync</p>
 <code>sync</code>
-5. Reboot
+<p>5. Reboot</p>
 <code>/sbin/reboot -ff</code></p>
 <p><media type="image" src="upload://v3mTMw4ZmaiMU2FuIIIt2gKnKuw.png" mime="image/png" /></p>
 <p>Your user password should now be reset.</p>

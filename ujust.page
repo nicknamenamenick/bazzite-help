@@ -7,21 +7,36 @@
 <title>2. ujust</title>
 
 <section>
- <title><link type="seealso" href="https://universal-blue.discourse.group/docs?topic=42"><code>ujust</code></link></title>
+ <title>2. <link type="seealso" href="https://universal-blue.discourse.group/docs?topic=42"><code>ujust</code></link></title>
  <p><media type="image" src="upload://oLQaiumjX8VV6x2WrJFSZIVoDR4.png" mime="image/png" /></p>
  <p>Technically <code>ujust</code> is <em style="strong">not</em> a package format, but convenience commands that automate tasks using scripts.</p>
  <p>It can be used to install certain software, but there are also commands for system configuration and maintenance too.</p>
  <p>Open a host terminal and <em style="strong">enter</em>:</p>
- <p><code>ujust</code>
- This will output a list of available commands.</p>
- <p><media type="image" src="upload://8Rkc2Qe1CYy3MBwS2CA4Uf5rqzq.png" mime="image/png" /></p>
- <p>This will show all possible commands.</p>
- <p><em style="strong">Find the command you want to use and enter</em>:
+ <code>ujust</code>
+ <p>This will output a list of available commands.</p>
+ <p><media type="image" src="upload://8Rkc2Qe1CYy3MBwS2CA4Uf5rqzq.png" mime="image/png" /></p> <p><em style="strong">Find the command you want to use and enter</em>:
  <code>ujust &lt;command&gt;</code></p>
  <p>You can search for specific commands by <em style="strong">entering</em>:
  <code>ujust | grep "&lt;search keyword(s)&gt;"</code></p>
- <p>If you would like to see what each script does for each command, then you can view them locally in:
- <code>/usr/share/ublue-os/just</code></p>
+ <list>
+ <item><p><code>install-</code>: Install program, there is no configurations or uninstall commands</p></item>
+ <item><p><code>get-</code>: Install an "extension" like Decky plugins, and if it is an extension then it can use <code>get-</code> too</p></item>
+ <item><p><code>setup-</code>: Install program, provides uninstall and configuration options for after install</p></item>
+ <item><p><code>configure-</code>: Configure something that came by default on the image</p></item>
+ <item><p><code>toggle-</code>: Turns something on/off</p></item>
+ <item><p><code>fix-</code>: Fixes, patches or works around an issue</p></item>
+ <item><p><code>distrobox-</code>: Distrobox exclusive verb for useful Distrobox stuff</p></item>
+ <item><p><code>toolbox-</code>: Like the above Distrobox commands, but for Toolbx</p></item>
+ <item><p><code>foo</code>: Replace this with whatever the command is called </p></item>
+ </list>
+</section>
+
+<section>
+ <subtitle>View each <code>ujust</code> script's source code</subtitle>
+ <p>If you would like to see what each script does for each command then open a host terminal and <em style="strong">enter</em>: </p>
+ <code>ujust --show &lt;command&gt;</code>
+ <p>Alternatively, you can find the <code>ujust</code> commands locally in:
+ <code>/usr/share/ublue-os/just</code></p>s
 </section>
 
 </page>

@@ -4,7 +4,7 @@
 <info>
   <link type="guide" xref="gaming"/>
 </info>
-<title>Workarounds</title>
+<title>4. Workarounds</title>
 
 <section>
  <title>Source 1 Game Issues (Team Fortress 2, Left 4 Dead 2, etc.)</title>
@@ -13,10 +13,8 @@
 <section>
  <subtitle>Games are not launching</subtitle>
  <p>If a 32-bit Source 1 engine game is not opening due to <link type="seealso" href="https://github.com/ValveSoftware/csgo-osx-linux/issues/3229">tmalloc libraries issues</link>, then open a host terminal and enter:</p>
- <p>```
- ujust patch-source1-tcmalloc
- ````
- Follow the directions that display on the terminal output.</p>
+ <p> <code> ujust patch-source1-tcmalloc </code> </p>
+   <p> Follow the directions that display on the terminal output. </p>
 </section>
 
 <section>

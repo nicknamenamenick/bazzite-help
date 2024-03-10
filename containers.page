@@ -10,28 +10,6 @@
 
 <p> Using this method to obtain software requires knowledge of how traditional Linux operating systems install packages </p>
 
-<p> Package Mangers for a Small List of Linux Distributions: </p>
-
-<table>
-  <tr>
-    <td><p>OS</p></td> <td><p>Package Manager</p></td>
-  </tr>
-  <tr>
-    <td><p>Eurasian Wigeon</p></td> <td><p>Anas penelope</p></td>
-    <td><p>45-50cm</p></td>         <td><p>680g</p></td>
-  </tr>
-  <tr>
-    <td><p>Common Teal</p></td> <td><p>Anas crecca</p></td>
-    <td><p>34-43cm</p></td>     <td><p>360g</p></td>
-  </tr>
-  <tr>
-    <td><p>Northern Pintail</p></td> <td><p>Anas acuta</p></td>
-    <td><p>59-76cm</p></td>          <td><p>450-1360g</p></td>
-  </tr>
-</table>
-
-
-
 <section>
  <subtitle><link type="seealso" href="https://distrobox.it/">Distrobox</link></subtitle>
  <p><media type="image" src="upload://p0qiLk4DY2QMJKPFZ6pNItOlhim.png" mime="image/png" /></p>

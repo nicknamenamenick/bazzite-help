@@ -4,7 +4,7 @@
 <info>
   <link type="guide" xref="gaming"/>
 </info>
-<title>Managing and Modding Games</title>
+<title>3. Managing and Modding Games</title>
 
 <section>
  <title>Hidden Files</title>
@@ -48,7 +48,6 @@
  <item><p>Steam Workshop is the easiest way to obtain mods, but is not supported for every title and requires you to own the game on Steam</p></item>
  <item><p>Some mod managers have Linux ports like <link type="seealso" href="https://github.com/ebkr/r2modmanPlus">r2modman</link></p></item>
  <item><p><link type="seealso" href="https://github.com/sonic2kk/steamtinkerlaunch">Steam Tinker Launch</link> may have useful settings for modding certain titles</p></item>
- <item><p>It can be installed via ProtonUp-Qt (for KDE images) or ProtonPlus (for GNOME images)</p></item>
  <item><p>Replace files and directories is still supported in both the game directory and prefix, but there may be some extra steps involved</p></item>
  <item><p>Some mods require a "WINE DLL OVERRIDE" environment variable in the Steam launch options, like this example:
  <code>WINEDLLOVERRIDES="dinput8=n,b" %command%</code> </p></item>

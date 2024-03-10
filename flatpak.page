@@ -8,7 +8,7 @@
 
 <desc>Flatpak is the primary method of installing applications on Bazzite.  It is a universal containerized package format that tries to sandbox applications through flexible permissions that the application has access to on your system.</desc>
 
-<p> The default Flatpak remote is from <link type="seealso" href="https://flathub.org/popular/1">Flathub</link>. </p>
+<p> The default Flatpak remote is from <link type="seealso" href="https://flathub.org/apps/collection/popular/1">Flathub</link>. </p>
 
 <figure>
   <title>Discover and GNOME Software</title>
@@ -22,7 +22,7 @@
   flatpak install package
   </screen>
 
-  <p> Manage Flatpaks with Flatseal and Warehouse which are both pre-installed. </p>
+  <p> Manage Flatpaks with the Flatseal and Warehouse applications, which are both pre-installed. </p>
 
   <p> Both "system" and "user" Flathub remotes are enabled by default.  Some applications may require the system remote, but user should be used in most cases.</p>
 

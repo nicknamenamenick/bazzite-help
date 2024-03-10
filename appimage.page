@@ -13,7 +13,7 @@
  <p>AppImages can be installed by downloading any file with a <code>.AppImage</code> extension and then giving it executable permissions in the file's properties so the application can run properly.</p>
  <p>Typically, AppImages can be installed from a project's website, <link type="seealso" href="https://www.appimagehub.com/">AppImage Hub</link> or if you install <link type="seealso" href="https://flathub.org/apps/io.github.prateekmedia.appimagepool">AppImage Pool</link>.</p>
  <p>Manage AppImages with the <link type="seealso" href="https://github.com/mijorus/gearlever">Gear Lever</link> application that is pre-installed.</p>
- <p><em style="strong">NOTE</em>: AppImages may not be supported if rebasing to another Universal Blue image.</p>
+ <p><em style="strong">NOTE</em>: AppImages may not be supported if rebasing to another Fedora Atomic image.</p>
 </section>
 
 </page>

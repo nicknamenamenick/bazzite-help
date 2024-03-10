@@ -6,6 +6,9 @@
 </info>
 <title>2. Rollbacks</title>
 
+<media type="image" src="rollbacks.png" width="300" height="300"/>
+
+
 <section>
  <title>How do I rollback a system update?</title>
  <p>You can rollback in the GRUB menu (the menu you see before booting into Bazzite) by choosing the previous boot entry.  </p>

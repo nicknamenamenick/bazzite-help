@@ -5,10 +5,7 @@
   <link type="guide" xref="applications"/>
 </info>
 <title>5. rpm-ostree</title>
-
 <section>
- <title>5. <link type="seealso" href="https://universal-blue.discourse.group/docs?topic=513">rpm-ostree</link></title>
- <p><media type="image" src="upload://11DT7DinQfjfEfVbXh14ImV6yaL.png" mime="image/png" /></p>
  <p>Obtain Fedora Linux packages like you typically would with the package manager.  </p>
  <p>This is known as "layering packages" to the image.  </p>
  <p>This will require a system reboot when it finishes downloading and layering the package to your image in most cases.</p>

@@ -7,7 +7,7 @@
 <title>03 - Steam Deck / HTPC / Handheld-PC Guide</title>
 
 <section>
-  <subtitle> Steam Deck </subtitle>
+  <subtitle> Does the Steam Deck recieve BIOS updates? </subtitle>
   <p><em style="strong">Yes</em>.  </p>
   <p>If a BIOS update is available then it will install when you update Bazzite normally.  It also supports controller firmware updates too.</p>
   <p>If desired, there is a  <em style="strong">command to disable BIOS updates</em> at your own risk:
@@ -47,6 +47,51 @@
 <section>
  <subtitle>Install <link type="seealso" href="https://github.com/frazse/PS5-to-Xbox-glyphs">PS5-to-Xbox glyph theme for hhd &amp; CSS Loader</link></subtitle>
  <p><code>ujust install-hhd-xbox-glyph-theme</code></p>
+</section>
+
+<section>
+ <title>How do I use X11 in Desktop Mode?</title>
+ <p>X11 is a legacy windowing system, but there may be specific edge cases where it is required.</p>
+ <p>Open a host terminal and enter:
+ <code>ujust _toggle_wayland</code>
+ Reboot your system after this.</p>
+</section>
+
+<section>
+ <title>How do I access GRUB?</title>
+ <p><link type="seealso" href="https://www.gnu.org/software/grub/manual/grub/grub.html#Overview">GRUB</link> is hidden by default.</p>
+ <p>Press Esc on a physical keyboard or the "B" button on the Steam Deck to access it on boot.</p>
+ <p>Keep in mind, other handhelds and controllers may not be able to unhide GRUB with a shortcut, but a <code>ujust</code> command can be performed to unhide it permanently.</p>
+ <p>Enter this command in the terminal to have it appear every boot:
+ <code>ujust unhide-grub</code></p>
+</section>
+
+<section>
+ <title>I lost my "Return to Gaming Mode" shortcut on <code>-deck</code> images</title>
+ <p>You can restore this shortcut by creating a text file called Return.desktop and adding these specific lines to it:</p>
+</section>
+
+<section>
+ <subtitle>KDE</subtitle>
+ <p><code>[Desktop Entry]
+ Name=Return to Gaming Mode
+ Exec=qdbus org.kde.Shutdown /Shutdown org.kde.Shutdown.logout
+ Icon=steamdeck-gaming-return
+ Terminal=false
+ Type=Application
+ StartupNotify=false</code></p>
+</section>
+
+<section>
+ <subtitle>GNOME:</subtitle>
+ <p><code>[Desktop Entry]
+ Name=Return to Gaming Mode
+ Exec=gnome-session-quit --logout --no-prompt
+ Icon=steamdeck-gaming-return
+ Terminal=false
+ Type=Application
+ StartupNotify=false</code></p>
+ <p>Save it and place it in the Desktop directory.</p>
 </section>
 
 </page>

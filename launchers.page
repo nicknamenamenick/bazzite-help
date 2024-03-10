@@ -4,7 +4,7 @@
 <info>
   <link type="guide" xref="gaming"/>
 </info>
-<title>Game Launchers</title>
+<title>2. Game Launchers</title>
 
 <section>
  <title>Steam</title>
@@ -18,24 +18,20 @@
  <item><p>Currently Steam only allows whitelisted games to run by default.</p></item>
  <item><p>You can change this by going into the Steam <em style="strong">Settings</em> &gt; <em style="strong">Compatibility</em> &gt; Check <em style="strong">Enable Steam Play for all other titles</em></p></item>
  </list>
- <p><media type="image" src="upload://nXBb6Smr17lMnyV3TH1ePxvYVuA.png" mime="image/png" />
- <media type="image" src="upload://IixmUZBAH8wiG0DRssksO0khXF.png" mime="image/png" /></p>
+ <media type="image" src="steam_settings.png" mime="image/png"/>
 </section>
 
 <section>
  <title>Forcing a specific Proton / Steam Play Tool Version</title>
  <list>
- <item><p>Games with a Linux port will be used by default on Desktop images</p></item>
- <item><p>Valve selects the default runner on <em>Steam Deck, HTPC, and Handheld-PC</em> images</p></item>
  <item><p>Some games run better with a specific version of Proton or forcing the Linux runtime
  Run that specific version by going into the game's <em style="strong">Properties</em> &gt; <em style="strong">Compatibility</em> &gt; <em style="strong">Force the use of a specific Steam Play compatibility tool</em></p></item>
  </list>
 
 
- <p><media type="image" src="upload://zo1TyrRxr8Fu48ACJg34pWKvF7P.png" mime="image/png" />
- <media type="image" src="upload://iiTx9285kbPupqLDGX4ak4RIvdm.png" mime="image/png" /></p>
+ <p><media type="image" src="compat.png" mime="image/png" /> </p>
  <p><em style="strong">Note:</em> If you are using the <link type="seealso" href="https://universal-blue.discourse.group/docs?topic=37"><em>Steam Deck/HTPC/Handheld-PC</em> images</link> and want to disable Steam Deck specific features, then <em style="strong">enter this launch option for the game in the properties menu</em>:
- <code>command
+ <code>
  SteamDeck=0 %command%</code></p>
 </section>
 
@@ -51,18 +47,13 @@
 
 <section>
  <subtitle>Lutris</subtitle>
- <p><media type="image" src="upload://3s2iqYP1Q1ZeCpMaQapqhG4gR1V.png" mime="image/png" /></p>
+ <p><media type="image" src="lutris.png" mime="image/png" /></p>
  <p>Lutris is game management software that doubles as a WINE front-end for Windows games.</p>
  <p><media type="image" src="upload://1WR6qGSLGJ0oRkdwvCFwhCZllq0.png" mime="image/png" /></p>
  <p>Several games and launchers can be installed by searching for the title and using one of the installer scripts for it.</p>
  <p>It is <em style="strong">recommend to use a Lutris Wine runner or GE-WINE</em>.  Do not attempt to run games with the generic system WINE.</p>
-</section>
 
-<section>
- <subtitle>Manually adding a Windows game to Lutris</subtitle>
- <p><media type="image" src="upload://yszYNbYIAwCw4otGldSK6C29Jus.png" mime="image/png" /></p>
- <p><media type="image" src="upload://bg3TFXN4v74tRZ0OvCfXPo3Dh25.png" mime="image/png" /></p>
- <p>However if your game is not listed or doesn't work with the provided script, then manually add the executable.</p>
+  <p>However if your game is not listed or doesn't work with the provided script, then manually add the executable.</p>
 </section>
 
 <section>

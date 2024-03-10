@@ -8,23 +8,21 @@
 <title>06 - Setting Up DaVinci Resolve</title>
 <section>
  <p><link type="seealso" href="https://www.blackmagicdesign.com/products/davinciresolve">DaVinci Resolve</link> is an industry standard professional visual effects and video editor by Blackmagic Design.</p>
- <steps>
- <item><p>Open a host terminal and <em style="strong">enter</em>:</p></item>
- </steps>
- <p><code>ujust distrobox</code>
- 2. Select "New"
- 3.  When it asks for an image name, <em style="strong">enter</em>:
- <code>ghcr.io/zelikos/davincibox:latest</code>
- 4.  Name your container: <code>davincibox</code>
- 5. Download DaVinci Resolve (requires you to register an account)
- 6.  Extract the archive to any directory you want
- 7. In your host terminal, run <code>--appimage-extract</code> on your DaVinci Resolve installer:
- <code>command
- /path/to/DaVinci_Resolve_version_Linux.run --appimage-extract</code>
- 8. Then run this command in the container:
- <code>distrobox enter davincibox -- setup-davinci /path/to/DaVinci_Resolve_version_Linux.run distrobox</code></p>
+ <item><p>1. Open a host terminal and <em style="strong">enter</em>:</p></item>
+ <code>ujust distrobox</code>
+ <p>2. Select "New"</p>
+ <p>3.  When it asks for an image name, <em style="strong">enter</em>:</p>
+   <code>ghcr.io/zelikos/davincibox:latest</code>
+ <p>4. Name your container: <code>davincibox</code></p>
+ <p>5. Download DaVinci Resolve (requires you to account registration)</p>
+ <p>6.  Extract the archive to any directory you want</p>
+ <p>7. In your host terminal, run <code>--appimage-extract</code> on your DaVinci Resolve installer:
+ <code>
+   /path/to/DaVinci_Resolve_version_Linux.run --appimage-extract</code></p>
+   <p>8. Then run this command in the container:</p>
+ <code>distrobox enter davincibox -- setup-davinci /path/to/DaVinci_Resolve_version_Linux.run distrobox</code>
  <p><em style="strong">Note</em>: Replace <code>/path/to/...</code> with the correct location of this binary.</p>
- <p>Important notes from the project:</p>
+ <p><em style="strong">Important notes from the project</em>:</p>
 
  <p>The suffix at the end is for the <code>add-davinci-launcher</code> script. If omitted, setup will still run, but adding the launcher to your application menu won't work.</p>
  <p>You can still run <code>add-davinci-launcher</code> separately, as either <code>add-davinci-launcher distrobox</code> or <code>add-davinci-launcher toolbox</code>, depending on what you're using.</p>
