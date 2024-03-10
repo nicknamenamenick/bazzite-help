@@ -20,7 +20,7 @@ It is recommended to build this in a Distrobox or Toolbx container.
 Download this repo and extract the archive to a preferrred location.
 
 ```bash
-cd /path/to/bazzite-help-main
+cd /path/to/bazzite-help-main/
 ```
 
 ```bash
@@ -38,6 +38,10 @@ make clean
 ### Reading Help File
 
 From the host:
+
+```bash
+cd /path/to/bazzite-help-main/docs
+```
 
 ```bash
 yelp .
