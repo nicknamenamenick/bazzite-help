@@ -1,6 +1,8 @@
 # bazzite-help
 Example linux yelp-based help documentation, using `yelp-tools` for freedesktop.org compliant linux help.
 
+Mallard is used for documentation markup language.
+
 ## Instructions
 
 ### Dev Container
