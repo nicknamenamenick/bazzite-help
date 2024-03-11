@@ -73,25 +73,25 @@
 
 <section>
  <subtitle>KDE</subtitle>
- <p><code>[Desktop Entry]
- Name=Return to Gaming Mode
- Exec=qdbus org.kde.Shutdown /Shutdown org.kde.Shutdown.logout
- Icon=steamdeck-gaming-return
- Terminal=false
- Type=Application
- StartupNotify=false</code></p>
+ <p><code>[Desktop Entry]</code></p>
+ <p><code>Name=Return to Gaming Mode</code></p>
+ <p><code>Exec=qdbus org.kde.Shutdown /Shutdown org.kde.Shutdown.logout</code></p>
+ <p><code>Icon=steamdeck-gaming-return</code></p>
+ <p><code>Terminal=false</code></p>
+ <p><code>Type=Application</code></p>
+ <p><code>StartupNotify=false</code></p>
 </section>
 
 <section>
  <subtitle>GNOME:</subtitle>
- <p><code>[Desktop Entry]
- Name=Return to Gaming Mode
- Exec=gnome-session-quit --logout --no-prompt
- Icon=steamdeck-gaming-return
- Terminal=false
- Type=Application
- StartupNotify=false</code></p>
- <p>Save it and place it in the Desktop directory.</p>
+ <p><code>[Desktop Entry]</code></p>
+  <p><code>Name=Return to Gaming Mode</code></p>
+  <p><code>Exec=gnome-session-quit --logout --no-prompt</code></p>
+  <p><code>Icon=steamdeck-gaming-return</code></p>
+  <p><code>Terminal=false</code></p>
+  <p><code>Type=Application</code></p>
+  <p><code>StartupNotify=false</code></p>
+  <p>Save it and place it in the Desktop directory.</p>
 </section>
 
 </page>

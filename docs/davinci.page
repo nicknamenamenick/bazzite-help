@@ -20,7 +20,7 @@
  <code>
    /path/to/DaVinci_Resolve_version_Linux.run --appimage-extract</code></p>
    <p>8. Then run this command in the container:</p>
- <code>distrobox enter davincibox -- setup-davinci /path/to/DaVinci_Resolve_version_Linux.run distrobox</code>
+ <code>distrobox enter davincibox -- setup-davinci squashfs-root/AppRun distrobox</code>
  <p><em style="strong">Note</em>: Replace <code>/path/to/...</code> with the correct location of this binary.</p>
  <p><em style="strong">Important notes from the project</em>:</p>
 

@@ -18,9 +18,7 @@
 
   <p> Alternatively, open a host terminal and enter: </p>
 
-<screen>
-  flatpak install package
-  </screen>
+<code>flatpak install package</code>
 
   <p> Manage Flatpaks with the Flatseal and Warehouse applications, which are both pre-installed. </p>
 
