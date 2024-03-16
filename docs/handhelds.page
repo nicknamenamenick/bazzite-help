@@ -6,6 +6,12 @@
 </info>
 <title>03 - Steam Deck / HTPC / Handheld-PC Guide</title>
 
+
+Bazzite for Steam Deck hardware, Home Theater PC setups, and other Handheld PCs like the Lenovo Legion Go and Asus ROG Ally. Intended to be controller-friendly and give a “console-like” experience using a session based on Steam’s Big Picture Mode for the user interface + the benefits of gamescope.
+
+NOTICE: Bazzite is similar to SteamOS on the Steam Deck. Our documentation may not cover specific areas with the assumption that the user already knows certain aspects of SteamOS. If you are unfamiliar with something that cannot be found in our documentation, then research your specific question with “SteamOS” or “Steam Deck” as keywords in your search.
+
+
 <section>
   <subtitle> Does the Steam Deck recieve BIOS updates? </subtitle>
   <p><em style="strong">Yes</em>.  </p>
