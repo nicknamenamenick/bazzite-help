@@ -12,3 +12,4 @@
 - Auto-Mounting Secondary Drives
 - Reset User Password
 - Compiling Looking Glass (maybe)
+- Handheld Wiki
