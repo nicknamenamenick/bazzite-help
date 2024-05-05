@@ -4,3 +4,4 @@
 - This is intended for GNOME.
   - Eventually will need a KHelpCenter version which uses DocBook as opposed to Mallard.
 - Make sure to backup files to the Github repository!
+- **UPDATE AS OF 05/05/2024**: Redo to match https://docs.bazzite.gg/.
