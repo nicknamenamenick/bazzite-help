@@ -1,0 +1,1 @@
+alias rtfm='xdg-open /usr/share/ublue-os/docs'
