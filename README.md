@@ -2,6 +2,8 @@
 
 However, it still might work if you want to see the original method of offline documentation which was exclusively for GNOME images at the time.
 
+This is the new plan: https://github.com/Zeglius/bazzite/blob/feat/mdbook/docs/README.md
+
 # bazzite-help
 Example linux yelp-based help documentation, using `yelp-tools` for freedesktop.org compliant linux help.
 
